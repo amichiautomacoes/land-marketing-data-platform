@@ -3,7 +3,7 @@
   const heroCopy = {
     title: 'Todos os dados dos seus clientes. ',
     emphasis: 'Uma única plataforma.',
-    subtitle: 'Centralize dados, acompanhe resultados e gerencie a performance da sua carteira com uma solução completa para agências de marketing.',
+    subtitle: 'Centralize dados, acompanhe resultados e gerencie a performance da sua carteira com uma plataforma de dados de marketing para agências.',
     primaryCta: 'Conhecer a plataforma',
     secondaryCta: 'Entenda como funciona',
   };
@@ -16,9 +16,23 @@
     { name: 'LinkedIn Ads', file: 'linkedin-ads', width: 645 },
     { name: 'Meta', file: 'meta', width: 616 },
   ];
+  const tickerCopy = {
+    'Text editor': 'Integração de dados de marketing',
+    'Newsletter builder': 'Dashboards de marketing digital',
+    'Website builder': 'Infraestrutura gerenciada',
+    'Artificial intelligence': 'Centralização de dados',
+    'Automations': 'Automação de dados',
+    'Recommendations': 'Tracking de conversões',
+    'Referral program': 'Relatórios de marketing',
+    'Monetization': 'Dashboards de tráfego pago',
+    'Audience segmentation': 'Dashboards por cliente',
+    'Growth tools': 'Gestão de resultados',
+    '3D analytics': 'Análise de campanhas',
+    'Ad network': 'Google Ads e Meta Ads',
+  };
   const operationCopy = {
     title: 'Sua agência conquista mais clientes. Mas sua operação acompanha?',
-    subtitle: 'À medida que sua carteira cresce, aumentam as plataformas, os dados e os relatórios que sua equipe precisa administrar.',
+    subtitle: 'À medida que sua carteira cresce, aumentam as plataformas, os dados e os relatórios de marketing que sua equipe precisa administrar.',
     emphasis: 'Informações dispersas, tarefas manuais e processos técnicos',
     description: ' tornam a operação mais complexa e consomem tempo que poderia ser dedicado à análise de resultados e à estratégia dos clientes.',
     cta: 'Simplifique sua operação',
@@ -33,7 +47,7 @@
     {
       title: 'Conecte.',
       heading: 'Conect',
-      description: 'Integre os dados de diferentes plataformas e clientes em um único ambiente, preparado para acompanhar o crescimento da sua agência.',
+      description: 'Integre os dados de campanhas de diferentes plataformas e clientes em um único ambiente, preparado para acompanhar o crescimento da sua agência.',
       image: {
         alt: 'Plataformas de marketing conectadas a uma infraestrutura central de dados.',
         desktop: { src: '/assets/section-3/conect-desktop.webp', width: 1600, height: 1000 },
@@ -77,7 +91,7 @@
   ];
   const solutionsCopy = {
     title: 'Quatro soluções integradas. Uma única plataforma.',
-    subtitle: 'Da integração de dados à análise de resultados, a Marketing Data Platform reúne os recursos essenciais para organizar, mensurar e acompanhar a operação de dados da sua agência.',
+    subtitle: 'Da integração de dados de marketing à análise de resultados, a Marketing Data Platform reúne os recursos essenciais para organizar, mensurar e acompanhar a operação de dados da sua agência.',
     cta: 'Conheça as funcionalidades',
   };
   const solutionsCardsCopy = [
@@ -94,7 +108,7 @@
     },
     {
       title: 'Infraestrutura de Dados',
-      description: 'Conte com uma estrutura gerenciada em Google Cloud para armazenar, processar e organizar os dados da sua operação, sem administrar diretamente os serviços de nuvem.',
+      description: 'Conte com uma infraestrutura de dados para marketing gerenciada em Google Cloud para armazenar, processar e organizar os dados da sua operação, sem administrar diretamente os serviços de nuvem.',
       image: {
         name: 'infraestrutura-dados',
         alt: 'Servidores e bancos de dados conectados em uma infraestrutura gerenciada no Google Cloud.',
@@ -116,7 +130,7 @@
     },
     {
       title: 'Dashboards & BI',
-      description: 'Acompanhe a performance da sua carteira, compare empresas-clientes, monitore metas e consulte indicadores em dashboards organizados por cliente e plataforma.',
+      description: 'Acompanhe a performance da sua carteira, compare empresas-clientes, monitore metas e consulte indicadores em dashboards de marketing digital organizados por cliente e plataforma.',
       image: {
         name: 'dashboards-bi',
         alt: 'Dashboard consolidado da agência conectado aos painéis individuais de seus clientes.',
@@ -128,7 +142,7 @@
   ];
   const dashboardsCopy = {
     title: 'Toda a sua carteira em uma visão. Cada cliente em detalhe.',
-    subtitle: 'Visualize os indicadores consolidados da sua agência, compare o desempenho entre clientes e explore os resultados individuais em dashboards organizados por plataforma.',
+    subtitle: 'Visualize os indicadores consolidados da sua agência, compare o desempenho entre clientes e explore os resultados individuais em dashboards de tráfego pago e analytics organizados por plataforma.',
     cta: 'Explore os dashboards',
   };
   const dashboardCardsCopy = [
@@ -183,7 +197,7 @@
   const productivityCardsCopy = [
     {
       title: 'Mais produtividade',
-      description: 'Reduza tarefas recorrentes de coleta e organização de informações para dedicar mais tempo à análise.',
+      description: 'Reduza tarefas recorrentes de coleta e organização de dados de marketing para dedicar mais tempo à análise.',
       image: platformTabsCopy[0].image,
     },
     {
@@ -300,6 +314,19 @@
     }
     while (current.return) current = current.return;
     return nearestMounted === fiber && current.tag === 3 && !current.memoizedState?.isDehydrated;
+  };
+  const applyTickerCopy = () => {
+    let pendingHydration = false;
+    document.querySelectorAll('.ticker-image-container > span').forEach(item => {
+      if (!isHydrated(item)) { pendingHydration = true; return; }
+      // Preserve the captured SVG separators, tracks and React-owned elements.
+      for (const node of item.childNodes) {
+        if (node.nodeType !== Node.TEXT_NODE) continue;
+        const replacement = tickerCopy[node.nodeValue.trim()];
+        if (replacement) node.nodeValue = replacement;
+      }
+    });
+    if (pendingHydration) setTimeout(schedule, 50);
   };
   const applySocialLogos = () => {
     const container = document.querySelector('.trusted-newsletters-container');
@@ -1153,7 +1180,7 @@
     apply();
   };
   const refineAccessibility = () => {
-    const pageTitle = 'Marketing Data Platform | Ativos Tecnologia';
+    const pageTitle = 'Plataforma de Dados de Marketing para Agências | MDP';
     if (document.title !== pageTitle) document.title = pageTitle;
     const description = document.querySelector('meta[name="description"]');
     if (description && description.content !== heroCopy.subtitle) description.content = heroCopy.subtitle;
@@ -1313,7 +1340,7 @@
     applyHeroCopy();
     const socialMediaHeading = document.querySelector('.trusted-newsletters-container')?.previousElementSibling;
     if (socialMediaHeading && isHydrated(socialMediaHeading)) {
-      setText(socialMediaHeading, 'Relatórios e dashboards completos para todas as mídias sociais!');
+      setText(socialMediaHeading, 'Relatórios e dashboards de marketing para sua agência!');
       socialMediaHeading.classList.remove('uppercase');
     }
     applySocialLogos();
@@ -1372,6 +1399,7 @@
     applySectionOrder();
     refinePresentation();
     refineAccessibility();
+    applyTickerCopy();
     refineReadingHierarchy();
   };
   let queued = false;
