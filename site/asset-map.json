@@ -1,0 +1,787 @@
+{
+  "origin": "https://www.beehiiv.com/",
+  "resources": {
+    "https://www.beehiiv.com/_next/static/chunks/0q-r-u-1jq-~h.css": {
+      "path": "assets/35d0cfd99c05280f02518266.css",
+      "mime": "text/css",
+      "bytes": 7775
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0zb_0.7zd9r97.css": {
+      "path": "assets/3967d691293b31f9c9781381.css",
+      "mime": "text/css",
+      "bytes": 67461
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0qo5t09_5alre.css": {
+      "path": "assets/c88a53cd75217dd87016c1bb.css",
+      "mime": "text/css",
+      "bytes": 3065
+    },
+    "https://www.beehiiv.com/_next/static/media/ClashGrotesk_Bold-s.p.0gt-.672.id-m.woff2": {
+      "path": "assets/e2ff45570dc63259b6d8052c.woff2",
+      "mime": "font/woff2",
+      "bytes": 19120
+    },
+    "https://www.beehiiv.com/_next/static/chunks/15wfqkhpg5y6g.css": {
+      "path": "assets/2130363c371d5dc63a8cd882.css",
+      "mime": "text/css",
+      "bytes": 5303
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0ppq0j83ctpf7.css": {
+      "path": "assets/14e1a2e6740f5f82eec83f2c.css",
+      "mime": "text/css",
+      "bytes": 1605
+    },
+    "https://www.beehiiv.com/_next/static/media/Satoshi_Black-s.p.0mxjq567rs1on.woff2": {
+      "path": "assets/09c7a8b0635d967fd1467830.woff2",
+      "mime": "font/woff2",
+      "bytes": 23484
+    },
+    "https://www.beehiiv.com/_next/static/media/Satoshi_Light-s.p.0lx670_9j82xu.woff2": {
+      "path": "assets/e8df092636ce0cd69b84fe1c.woff2",
+      "mime": "font/woff2",
+      "bytes": 22800
+    },
+    "https://www.beehiiv.com/_next/static/media/Satoshi_Bold-s.p.0yt9gwi-.i49f.woff2": {
+      "path": "assets/8aa1906a8ed776e02473525b.woff2",
+      "mime": "font/woff2",
+      "bytes": 25328
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0vleqrn.bsdmy.css": {
+      "path": "assets/1a56db1ad10a0e7a320ae5d4.css",
+      "mime": "text/css",
+      "bytes": 249506
+    },
+    "https://www.beehiiv.com/_next/static/media/Satoshi_Regular-s.p.049.kwhs-b7lf.woff2": {
+      "path": "assets/60ae3dbacb8562bb9589931b.woff2",
+      "mime": "font/woff2",
+      "bytes": 25516
+    },
+    "https://www.beehiiv.com/_next/static/media/HauntedHillSpooky_Spooky-s.p.02vwyvyej53e7.woff2": {
+      "path": "assets/aba1a2cf0493aadb78509b4a.woff2",
+      "mime": "font/woff2",
+      "bytes": 29688
+    },
+    "https://www.beehiiv.com/_next/static/media/Satoshi_Medium-s.p.0hq2a81xn4_re.woff2": {
+      "path": "assets/1163ebd5eb15f90eaba41625.woff2",
+      "mime": "font/woff2",
+      "bytes": 25596
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=1080,quality=75/www/homepage/hero-animation-2026/bg-gradient-2.png": {
+      "path": "assets/fcd1df5bebf8de05266b4310.avif",
+      "mime": "image/avif",
+      "bytes": 31283
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=1920,quality=75/www/homepage/hero-animation-2026/hero-newsletter.png": {
+      "path": "assets/5ded6a3f31b4533276d4011c.avif",
+      "mime": "image/avif",
+      "bytes": 93759
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=640,quality=75/www/pop-up-modal-multi-step/profile.png": {
+      "path": "assets/bdbb714041049685db3a65c3.avif",
+      "mime": "image/avif",
+      "bytes": 5015
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=1920,quality=75/www/homepage/hero-animation-2026/hero-products.png": {
+      "path": "assets/5a00577ccbb2c77bd917361d.avif",
+      "mime": "image/avif",
+      "bytes": 82944
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=48,quality=75/www/homepage/hero-images/social-proof/kaitarford.jpg": {
+      "path": "assets/efdb7dd90adb45e4b3d01669.avif",
+      "mime": "image/avif",
+      "bytes": 812
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=48,quality=75/www/homepage/hero-images/social-proof/jessica.jpg": {
+      "path": "assets/96237e7c6e3754e7ab10066a.avif",
+      "mime": "image/avif",
+      "bytes": 976
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=48,quality=75/www/homepage/hero-images/social-proof/shaan.jpg": {
+      "path": "assets/20ae40b8df7fe2b430dcd1de.avif",
+      "mime": "image/avif",
+      "bytes": 931
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0xanm2wif82.7.js": {
+      "path": "assets/d6716803bad1f68dc0d1f123.js",
+      "mime": "application/javascript",
+      "bytes": 25970
+    },
+    "https://www.beehiiv.com/_next/static/chunks/17_mzzv~ivn76.js": {
+      "path": "assets/8b65b729df016ba528d33048.js",
+      "mime": "application/javascript",
+      "bytes": 55841
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0uqn5wobpk18w.js": {
+      "path": "assets/fcf96fff3e7ad7eba8301028.js",
+      "mime": "application/javascript",
+      "bytes": 1130
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0xug1--wjiual.js": {
+      "path": "assets/99186aa4b9bff28f760d5470.js",
+      "mime": "application/javascript",
+      "bytes": 13737
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0i-10v115.qmq.js": {
+      "path": "assets/517907139f64043d5f091275.js",
+      "mime": "application/javascript",
+      "bytes": 35810
+    },
+    "https://www.beehiiv.com/_next/static/chunks/11m.a-9l.2kxc.js": {
+      "path": "assets/63d94d759a4636506159239a.js",
+      "mime": "application/javascript",
+      "bytes": 36981
+    },
+    "https://www.beehiiv.com/_next/static/chunks/06i2gcqbqf2y1.js": {
+      "path": "assets/2dbacdfc2a9b923ba8d4930d.js",
+      "mime": "application/javascript",
+      "bytes": 35911
+    },
+    "https://www.beehiiv.com/_next/static/chunks/05pdl0ry4pf8_.js": {
+      "path": "assets/664b5d67ca71de6cca942b38.js",
+      "mime": "application/javascript",
+      "bytes": 63608
+    },
+    "https://www.beehiiv.com/_next/static/chunks/144~j65021tzh.js": {
+      "path": "assets/136c1a0f5bde51093dad4123.js",
+      "mime": "application/javascript",
+      "bytes": 226465
+    },
+    "https://embeds.beehiiv.com/2437321d-52a5-4086-bceb-1550db1eed6d?slim=true": {
+      "path": "assets/bc769e3a0dae0870e310cb6d.html",
+      "mime": "text/html",
+      "bytes": 2941
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0fqfjr.2hsmez.js": {
+      "path": "assets/bfb7bde3ae4235a3fb3aaf32.js",
+      "mime": "application/javascript",
+      "bytes": 60087
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=96,quality=75/www/navigation/time-2.png": {
+      "path": "assets/ada16580f97441878e454ed5.avif",
+      "mime": "image/avif",
+      "bytes": 1104
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=96,quality=75/www/navigation/status-2.png": {
+      "path": "assets/0693653ca9174a188d2575cd.avif",
+      "mime": "image/avif",
+      "bytes": 1049
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=96,quality=75/www/navigation/morning-brew-2.png": {
+      "path": "assets/b9083650221298dc43ad0f49.avif",
+      "mime": "image/avif",
+      "bytes": 1132
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0rwc6lo_xiq90.js": {
+      "path": "assets/c5ab8415aafea761e60a8642.js",
+      "mime": "application/javascript",
+      "bytes": 45244
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0_4f33ul90e7~.js": {
+      "path": "assets/cc02b309593801ae851f00a2.js",
+      "mime": "application/javascript",
+      "bytes": 67097
+    },
+    "https://www.beehiiv.com/_next/static/chunks/14bhk_4ubar1..js": {
+      "path": "assets/17d4482e70f1aebd4b4bbe40.js",
+      "mime": "application/javascript",
+      "bytes": 137387
+    },
+    "https://www.beehiiv.com/_next/static/chunks/02ibqd6w6rn9f.js": {
+      "path": "assets/748a1dfe3af82831d9a5129a.js",
+      "mime": "application/javascript",
+      "bytes": 35882
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0x_61pptx.o-k.js": {
+      "path": "assets/d28770861453ad45dea70c7e.js",
+      "mime": "application/javascript",
+      "bytes": 59037
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0k-9gx5t~5wl9.js": {
+      "path": "assets/66be8585bea7a67f07edf239.js",
+      "mime": "application/javascript",
+      "bytes": 135095
+    },
+    "https://www.beehiiv.com/_next/static/chunks/08trv621~r89l.js": {
+      "path": "assets/8177b9fed6787d9b6d53999d.js",
+      "mime": "application/javascript",
+      "bytes": 22032
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0vgmd88n8.urc.js": {
+      "path": "assets/5f949dfad585cfecf48a9d98.js",
+      "mime": "application/javascript",
+      "bytes": 33289
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0l.rz05rh7~ak.js": {
+      "path": "assets/17532eee0e25f24ebda8bf63.js",
+      "mime": "application/javascript",
+      "bytes": 38791
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0p-x-_w7g7u...js": {
+      "path": "assets/3da125972ffe48d26b6436aa.js",
+      "mime": "application/javascript",
+      "bytes": 41656
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0nk4y3~-vt4_p.js": {
+      "path": "assets/58b8925837cd02bbe5d038ac.js",
+      "mime": "application/javascript",
+      "bytes": 32568
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0xg7.8hotcf-n.js": {
+      "path": "assets/3089aa79991c9c089b16abc7.js",
+      "mime": "application/javascript",
+      "bytes": 11117
+    },
+    "https://www.beehiiv.com/_next/static/chunks/turbopack-08qxdbkzgjuv5.js": {
+      "path": "assets/96cd468b43827a50c69e1763.js",
+      "mime": "application/javascript",
+      "bytes": 11053
+    },
+    "https://www.beehiiv.com/_next/static/chunks/05553x5wkcuk9.js": {
+      "path": "assets/96c6bd3b3d8ad6c2e48d1d75.js",
+      "mime": "application/javascript",
+      "bytes": 69674
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0uj~45uz0uwpf.js": {
+      "path": "assets/f25fe3ddf4ad1c2e73af9acb.js",
+      "mime": "application/javascript",
+      "bytes": 22862
+    },
+    "https://www.beehiiv.com/_next/static/chunks/01fqv.f4ey8px.js": {
+      "path": "assets/e474a010a4e4c2e814c59d01.js",
+      "mime": "application/javascript",
+      "bytes": 228604
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0a63nf~xi.nf3.js": {
+      "path": "assets/3e063b0ca5756e732a7e1ce4.js",
+      "mime": "application/javascript",
+      "bytes": 38908
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0vq0d3jpi7_tv.js": {
+      "path": "assets/d8573e9df27d44a5d8146b08.js",
+      "mime": "application/javascript",
+      "bytes": 114628
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0nco8iixp1ehz.js": {
+      "path": "assets/a05b2c3946002fb5a7208bde.js",
+      "mime": "application/javascript",
+      "bytes": 22001
+    },
+    "https://www.beehiiv.com/_next/static/chunks/118iis2~1vy9_.js": {
+      "path": "assets/3a0c9147baf016e832d6d2ff.js",
+      "mime": "application/javascript",
+      "bytes": 53704
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0hb8sz~11u-n~.js": {
+      "path": "assets/52e0d6de84e9ec86795423f5.js",
+      "mime": "application/javascript",
+      "bytes": 193365
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0--8kuj0.xrp-.js": {
+      "path": "assets/60d1412a47ba2e320ad14225.js",
+      "mime": "application/javascript",
+      "bytes": 31558
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0k89y9v_uvpqj.js": {
+      "path": "assets/c53462ed84ba3775ab20c9a9.js",
+      "mime": "application/javascript",
+      "bytes": 410971
+    },
+    "https://www.beehiiv.com/_next/static/chunks/02lqyspso9crf.js": {
+      "path": "assets/2c57adb599f2f2ec54bf47f0.js",
+      "mime": "application/javascript",
+      "bytes": 39088
+    },
+    "https://www.beehiiv.com/_next/static/chunks/16rcx3pticlsk.js": {
+      "path": "assets/de1e2901b12920e1877d03e3.js",
+      "mime": "application/javascript",
+      "bytes": 71458
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0fjs_hotm9pje.js": {
+      "path": "assets/c89b4f8eb13ee5ee6c7f77ef.js",
+      "mime": "application/javascript",
+      "bytes": 329119
+    },
+    "https://www.beehiiv.com/_next/static/chunks/03qmlz_th4gep.js": {
+      "path": "assets/8efe9859869298f601febb21.js",
+      "mime": "application/javascript",
+      "bytes": 218700
+    },
+    "https://embeds.beehiiv.com/assets/index-DdZVTB0z.js": {
+      "path": "assets/a43cdab2ea98bb77b7a808b3.js",
+      "mime": "application/javascript",
+      "bytes": 331857
+    },
+    "https://embeds.beehiiv.com/variables.js": {
+      "path": "assets/51e89c8d56aaa7b7dad1299a.js",
+      "mime": "application/javascript",
+      "bytes": 541
+    },
+    "https://www.beehiiv.com/_vercel/insights/script.js": {
+      "path": "assets/047d230d0a2caeec8a3c40f3.js",
+      "mime": "application/javascript",
+      "bytes": 4522
+    },
+    "https://www.beehiiv.com/static/lottieFiles/homepage-2025/Section-3.json": {
+      "path": "assets/d5df01de152080c03e39f330.json",
+      "mime": "application/json",
+      "bytes": 1060930
+    },
+    "https://www.beehiiv.com/static/lottieFiles/homepage-2025/Section-1-2.json": {
+      "path": "assets/bfac1d146425478f5f027819.json",
+      "mime": "application/json",
+      "bytes": 2010277
+    },
+    "https://www.beehiiv.com/static/lottieFiles/homepage-2025/Section-2.json": {
+      "path": "assets/ed60af5dd27140d9d4070097.json",
+      "mime": "application/json",
+      "bytes": 5770740
+    },
+    "https://www.beehiiv.com/_next/static/chunks/0s~li0t7s.pmd.js": {
+      "path": "assets/99edf0961030896eabcc4bcc.js",
+      "mime": "application/javascript",
+      "bytes": 314636
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=640,quality=75/www/homepage/Publish-dark.png": {
+      "path": "assets/b9fbadbc96532fd6dcf1d2c8.avif",
+      "mime": "image/avif",
+      "bytes": 8308
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=640,quality=75/www/homepage/Create-dark.png": {
+      "path": "assets/51758d665a0536024bade26e.avif",
+      "mime": "image/avif",
+      "bytes": 7098
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=640,quality=75/www/homepage/Grow-dark.png": {
+      "path": "assets/ad399f4bedbb2895cd3825d3.avif",
+      "mime": "image/avif",
+      "bytes": 6837
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=640,quality=75/www/homepage/Monetize-dark.png": {
+      "path": "assets/6effe93016a583a758936db6.avif",
+      "mime": "image/avif",
+      "bytes": 9072
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=640,quality=75/www/quote-headshots/SUNG%E2%80%93JAE-PARK.png": {
+      "path": "assets/e6b150692ae66dc713439ab3.avif",
+      "mime": "image/avif",
+      "bytes": 27184
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=48,quality=75/www/homepage/2026/testimonials/time-logo.png": {
+      "path": "assets/1877941d60fad1c423d1afa5.avif",
+      "mime": "image/avif",
+      "bytes": 768
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=1080,quality=75/www/homepage/integrations-dark.png": {
+      "path": "assets/599d6e3a00b963444741365d.avif",
+      "mime": "image/avif",
+      "bytes": 19067
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=1200,quality=75/www/homepage/bg-EndOfPageCTA.png": {
+      "path": "assets/11be37ef92f48a5c9b740139.avif",
+      "mime": "image/avif",
+      "bytes": 8210
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,onerror=redirect,format=auto,width=640,quality=75/www/homepage/bg-EndOfPageCTA-mobile.png": {
+      "path": "assets/5d0b2b166aac52b4070a2159.avif",
+      "mime": "image/avif",
+      "bytes": 6034
+    },
+    "https://beehiiv.cdn.prismic.io/beehiiv/TjsfNOPugaSJg7S8_LA-MAG.svg": {
+      "path": "assets/52d807acd90db7f3313d5bb1.svg",
+      "mime": "image/svg+xml",
+      "bytes": 13791
+    },
+    "https://beehiiv.cdn.prismic.io/beehiiv/_7en1eRB-FzJ39tV_boston-globe.svg": {
+      "path": "assets/ba6fcc722ab496bccb146504.svg",
+      "mime": "image/svg+xml",
+      "bytes": 10226
+    },
+    "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap": {
+      "path": "assets/ccb93e564fab6f60dd00e0e6.css",
+      "mime": "text/css",
+      "bytes": 266
+    },
+    "https://images.prismic.io/beehiiv/aeZrD8BOoF08xJY5_time.png?auto=format,compress": {
+      "path": "assets/b1ba18297d5aa69f9cee8a8a.png",
+      "mime": "image/png",
+      "bytes": 2625
+    },
+    "https://images.prismic.io/beehiiv/aeY7ksBOoF08xI8i_resume-worded.png?auto=format,compress": {
+      "path": "assets/c9213b9a2ecbadaf29c3695f.png",
+      "mime": "image/png",
+      "bytes": 4753
+    },
+    "https://beehiiv.cdn.prismic.io/beehiiv/Kqvm5zUJCSBbwlz1_blockworks.svg": {
+      "path": "assets/784d303f73d2fdf354e62e65.svg",
+      "mime": "image/svg+xml",
+      "bytes": 10623
+    },
+    "https://beehiiv.cdn.prismic.io/beehiiv/h19MjWloMA2Sal_Q_techcrunch.svg": {
+      "path": "assets/4d93da8c694cf7d3598c5db1.svg",
+      "mime": "image/svg+xml",
+      "bytes": 7727
+    },
+    "https://images.prismic.io/beehiiv/aeuyScBOoF08xShr_matt.png?auto=format,compress": {
+      "path": "assets/fed41d614241d97ef2d50c34.jpg",
+      "mime": "image/jpeg",
+      "bytes": 189656
+    },
+    "https://beehiiv.cdn.prismic.io/beehiiv/4aSpN-1OOpjV52J1_jws.svg": {
+      "path": "assets/ee885778b191f667a563ff24.svg",
+      "mime": "image/svg+xml",
+      "bytes": 4077
+    },
+    "https://beehiiv-images-production.s3.us-east-1.amazonaws.com/www/summer-release-2026/SR26-Banner-Logo.png": {
+      "path": "assets/6dbabf62021f4c93baf985a1.png",
+      "mime": "image/png",
+      "bytes": 16427
+    },
+    "https://images.prismic.io/beehiiv/aeZq2cBOoF08xJYs_rally-blue.png?auto=format,compress": {
+      "path": "assets/68459a1ace47879fc9770fd7.png",
+      "mime": "image/png",
+      "bytes": 5126
+    },
+    "https://media.beehiiv.com/www/homepage/2026/mesh/monetization.webp": {
+      "path": "assets/7d370cce7459f1dbaab53dbf.webp",
+      "mime": "image/webp",
+      "bytes": 14834
+    },
+    "https://media.beehiiv.com/www/homepage/2026/community.png": {
+      "path": "assets/753ceaaf418645e78269797f.png",
+      "mime": "image/png",
+      "bytes": 212505
+    },
+    "https://media.beehiiv.com/www/fancy_arrow.svg": {
+      "path": "assets/d2ec5c911b391a504875a991.svg",
+      "mime": "image/svg+xml",
+      "bytes": 210
+    },
+    "https://media.beehiiv.com/cdn-cgi/image/format=auto/www/fancy_arrow.svg": {
+      "path": "assets/426fef122d23ebe647ee57db.svg",
+      "mime": "image/svg+xml",
+      "bytes": 248
+    },
+    "https://beehiiv-images-production.s3.us-east-1.amazonaws.com/www/summer-release-2026/SR26-Banner-BG.png": {
+      "path": "assets/eef9246bea48e49789229e1a.png",
+      "mime": "image/png",
+      "bytes": 54612
+    },
+    "https://media.beehiiv.com/www/homepage/2026/mesh/digital-products.webp": {
+      "path": "assets/29d804ea995245989869be84.webp",
+      "mime": "image/webp",
+      "bytes": 9954
+    },
+    "https://media.beehiiv.com/www/homepage/2026/mesh/newsletters.webp": {
+      "path": "assets/d47d2e72a1069fea64608ba2.webp",
+      "mime": "image/webp",
+      "bytes": 22150
+    },
+    "https://media.beehiiv.com/www/homepage/2026/newsletter.png": {
+      "path": "assets/a878c8fceb8abf7a475cc1c6.png",
+      "mime": "image/png",
+      "bytes": 185057
+    },
+    "https://beehiiv-marketing-images.s3.amazonaws.com/Redesign2023/favicon.png": {
+      "path": "assets/4b6af047153df6c596e7433c.png",
+      "mime": "image/png",
+      "bytes": 180975
+    },
+    "https://media.beehiiv.com/www/homepage/2026/monetization.png": {
+      "path": "assets/b07858a8c0a233df423fb1f0.png",
+      "mime": "image/png",
+      "bytes": 325086
+    },
+    "https://media.beehiiv.com/www/homepage/2026/digital-products.png": {
+      "path": "assets/796358f39157d96067b1d238.png",
+      "mime": "image/png",
+      "bytes": 319962
+    },
+    "https://media.beehiiv.com/www/homepage/2026/mesh/podcasts.webp": {
+      "path": "assets/03407716c08fc8703d298105.webp",
+      "mime": "image/webp",
+      "bytes": 7766
+    },
+    "https://media.beehiiv.com/www/homepage/2026-v2/integrations.png": {
+      "path": "assets/b2a9ea459bcb452a9feae331.png",
+      "mime": "image/png",
+      "bytes": 510656
+    },
+    "https://media.beehiiv.com/www/homepage/2026/podcasts.png": {
+      "path": "assets/f52c80b320b42b2e2e1aa9ea.png",
+      "mime": "image/png",
+      "bytes": 305559
+    },
+    "https://media.beehiiv.com/www/homepage/2026/mesh/websites.webp": {
+      "path": "assets/6f36c6b9e4390cb7dc5f4748.webp",
+      "mime": "image/webp",
+      "bytes": 10910
+    },
+    "https://media.beehiiv.com/www/homepage/bg-EndOfPageCTA-mobile.png": {
+      "path": "assets/02fbc9cb79c75caa4c8885d8.png",
+      "mime": "image/png",
+      "bytes": 41449
+    },
+    "https://media.beehiiv.com/www/homepage/2026/websites.png": {
+      "path": "assets/fe8592119a18c2e053d5cbf7.png",
+      "mime": "image/png",
+      "bytes": 718845
+    },
+    "https://media.beehiiv.com/www/homepage/2026/testimonials/time-logo.png": {
+      "path": "assets/b081ba104acecfb7440e5768.png",
+      "mime": "image/png",
+      "bytes": 8689
+    },
+    "https://media.beehiiv.com/www/homepage/Grow-dark.png": {
+      "path": "assets/d6b573bb089b03b32a0152ee.png",
+      "mime": "image/png",
+      "bytes": 646951
+    },
+    "https://media.beehiiv.com/www/homepage/Create-dark.png": {
+      "path": "assets/370d040068a6da11397ea5b6.png",
+      "mime": "image/png",
+      "bytes": 448860
+    },
+    "https://media.beehiiv.com/www/homepage/Monetize-dark.png": {
+      "path": "assets/4f90e882bbbe26bdd90d28f4.png",
+      "mime": "image/png",
+      "bytes": 228072
+    },
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/bg-gradient-2.png": {
+      "path": "assets/4c54dfe2525346e02308a20c.png",
+      "mime": "image/png",
+      "bytes": 630726
+    },
+    "https://media.beehiiv.com/www/homepage/bg-EndOfPageCTA.png": {
+      "path": "assets/8eedd058e5001d92785ae5bb.png",
+      "mime": "image/png",
+      "bytes": 117596
+    },
+    "https://media.beehiiv.com/www/homepage/hero-images/social-proof/jessica.jpg": {
+      "path": "assets/cba87b32648d174c9ebdf0f2.jpg",
+      "mime": "image/jpeg",
+      "bytes": 3329
+    },
+    "https://media.beehiiv.com/www/homepage/hero-images/social-proof/shaan.jpg": {
+      "path": "assets/837b011bad5548cab05160e8.jpg",
+      "mime": "image/jpeg",
+      "bytes": 3329
+    },
+    "https://media.beehiiv.com/www/homepage/hero-images/social-proof/kaitarford.jpg": {
+      "path": "assets/b391b2fcfe22d3b64428cdc7.jpg",
+      "mime": "image/jpeg",
+      "bytes": 3151
+    },
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/hero-newsletter.png": {
+      "path": "assets/2e5af6ada357299f320dbe9b.png",
+      "mime": "image/png",
+      "bytes": 1553742
+    },
+    "https://media.beehiiv.com/www/homepage/Publish-dark.png": {
+      "path": "assets/43f6e57dc3310b48c3ce6613.png",
+      "mime": "image/png",
+      "bytes": 878106
+    },
+    "https://media.beehiiv.com/www/homepage/hero-images/ab-test/hero-1.png": {
+      "path": "assets/4fbae6bcc8cc651ac1ef2291.png",
+      "mime": "image/png",
+      "bytes": 1062783
+    },
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/hero-products.png": {
+      "path": "assets/dc002030a61a133b49b385ed.png",
+      "mime": "image/png",
+      "bytes": 1535234
+    },
+    "https://media.beehiiv.com/www/homepage/testimonials/miss-excel-logo.png": {
+      "path": "assets/eafc2ee4d5017b24bf09c90b.png",
+      "mime": "image/png",
+      "bytes": 10047
+    },
+    "https://media.beehiiv.com/www/homepage/integrations-dark.png": {
+      "path": "assets/c9a2252f3d0518827176326b.png",
+      "mime": "image/png",
+      "bytes": 690179
+    },
+    "https://media.beehiiv.com/www/navigation/morning-brew-2.png": {
+      "path": "assets/cf58f972ba01658ebde122c8.png",
+      "mime": "image/png",
+      "bytes": 4411
+    },
+    "https://media.beehiiv.com/www/navigation/casestudies-3.svg": {
+      "path": "assets/c2a387f624e3a2e02ddaefdf.svg",
+      "mime": "image/svg+xml",
+      "bytes": 147252
+    },
+    "https://media.beehiiv.com/www/homepage/testimonials/miss-excel.png": {
+      "path": "assets/e98a1421abf8a300fc1b6864.png",
+      "mime": "image/png",
+      "bytes": 919284
+    },
+    "https://media.beehiiv.com/www/navigation/status-2.png": {
+      "path": "assets/ca613a43ce2fb63d1d77f2e8.png",
+      "mime": "image/png",
+      "bytes": 3093
+    },
+    "https://media.beehiiv.com/www/navigation/casestudies-1.svg": {
+      "path": "assets/52df0940cb090ad75ea316a8.svg",
+      "mime": "image/svg+xml",
+      "bytes": 487307
+    },
+    "https://media.beehiiv.com/www/navigation/casestudies-2.svg": {
+      "path": "assets/17bdb3bf4890dd52b3291b32.svg",
+      "mime": "image/svg+xml",
+      "bytes": 311570
+    },
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/grid 1.png": {
+      "path": "assets/8ecd41ac190237b8bc89f1ba.png",
+      "mime": "image/png",
+      "bytes": 228683
+    },
+    "https://media.beehiiv.com/www/navigation/time-2.png": {
+      "path": "assets/39b5f02cadb8c27606e169d4.png",
+      "mime": "image/png",
+      "bytes": 3116
+    },
+    "https://media.beehiiv.com/www/pop-up-modal-multi-step/profile.png": {
+      "path": "assets/5e9c92937c5b6e58250ae6df.png",
+      "mime": "image/png",
+      "bytes": 156396
+    },
+    "https://media.beehiiv.com/www/quote-headshots/coastal_recruiting_logo.jpg": {
+      "path": "assets/566d9761e7a12ea6f0ceec1f.jpg",
+      "mime": "image/jpeg",
+      "bytes": 8922
+    },
+    "https://media.beehiiv.com/www/navigation/tour.png": {
+      "path": "assets/0aaf8c6f98234dc0497c3e80.png",
+      "mime": "image/png",
+      "bytes": 74457
+    },
+    "https://media.beehiiv.com/www/og-image/og-beehiiv.png": {
+      "path": "assets/906abec049e23b9c6d17bad0.png",
+      "mime": "image/png",
+      "bytes": 3046861
+    },
+    "https://media.beehiiv.com/www/quote-headshots/oliver-darcy-logo.png": {
+      "path": "assets/7b4e8430bd1c04906a71d43e.png",
+      "mime": "image/png",
+      "bytes": 3339
+    },
+    "https://media.beehiiv.com/www/navigation/state-of-newsletter-2.png": {
+      "path": "assets/c9ea038127f719e5da863790.png",
+      "mime": "image/png",
+      "bytes": 3486904
+    },
+    "https://media.beehiiv.com/www/quote-headshots/SUNG–JAE-PARK.png": {
+      "path": "assets/bcb773a20759cd17f9652a19.png",
+      "mime": "image/png",
+      "bytes": 924551
+    },
+    "https://media.beehiiv.com/www/quote-headshots/oliver-darcy02.png": {
+      "path": "assets/0f297befc83971665011ffbd.png",
+      "mime": "image/png",
+      "bytes": 769794
+    },
+    "https://media.beehiiv.com/www/quote-headshots/david.png": {
+      "path": "assets/7461de614fa8b807d705a002.png",
+      "mime": "image/png",
+      "bytes": 581140
+    },
+    "https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4n.ttf": {
+      "path": "assets/309cf388393d33255bb54775.ttf",
+      "mime": "font/ttf",
+      "bytes": 122116
+    },
+    "https://embeds.beehiiv.com/img/beehiiv-logo.png": {
+      "path": "assets/e1c493adbc5cceabdac272e7.png",
+      "mime": "image/png",
+      "bytes": 48182
+    },
+    "https://embeds.beehiiv.com/img/favicon.png": {
+      "path": "assets/5f889197047b1c0727061e7a.png",
+      "mime": "image/png",
+      "bytes": 1190
+    },
+    "https://embeds.beehiiv.com/api/embeds/2437321d-52a5-4086-bceb-1550db1eed6d": {
+      "path": "assets/e71f506a50b0d450a0796e51.json",
+      "mime": "application/json",
+      "bytes": 1335
+    },
+    "https://fonts.googleapis.com/css?family=Poppins:400,700": {
+      "path": "assets/b45d5434f0a37c155a29583f.css",
+      "mime": "text/css",
+      "bytes": 370
+    },
+    "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfedw.ttf": {
+      "path": "assets/9956463e700008e6e6e6546e.ttf",
+      "mime": "font/ttf",
+      "bytes": 16148
+    },
+    "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf": {
+      "path": "assets/8bb0f6e68e7168834af581eb.ttf",
+      "mime": "font/ttf",
+      "bytes": 15816
+    }
+  },
+  "imageAliases": {
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/bg-gradient-2.png": "https://media.beehiiv.com/www/homepage/hero-animation-2026/bg-gradient-2.png",
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/hero-newsletter.png": "https://media.beehiiv.com/www/homepage/hero-animation-2026/hero-newsletter.png",
+    "https://media.beehiiv.com/www/pop-up-modal-multi-step/profile.png": "https://media.beehiiv.com/www/pop-up-modal-multi-step/profile.png",
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/hero-products.png": "https://media.beehiiv.com/www/homepage/hero-animation-2026/hero-products.png",
+    "https://media.beehiiv.com/www/homepage/hero-images/social-proof/kaitarford.jpg": "https://media.beehiiv.com/www/homepage/hero-images/social-proof/kaitarford.jpg",
+    "https://media.beehiiv.com/www/homepage/hero-images/social-proof/jessica.jpg": "https://media.beehiiv.com/www/homepage/hero-images/social-proof/jessica.jpg",
+    "https://media.beehiiv.com/www/homepage/hero-images/social-proof/shaan.jpg": "https://media.beehiiv.com/www/homepage/hero-images/social-proof/shaan.jpg",
+    "https://media.beehiiv.com/www/navigation/time-2.png": "https://media.beehiiv.com/www/navigation/time-2.png",
+    "https://media.beehiiv.com/www/navigation/status-2.png": "https://media.beehiiv.com/www/navigation/status-2.png",
+    "https://media.beehiiv.com/www/navigation/morning-brew-2.png": "https://media.beehiiv.com/www/navigation/morning-brew-2.png",
+    "https://media.beehiiv.com/www/homepage/Publish-dark.png": "https://media.beehiiv.com/www/homepage/Publish-dark.png",
+    "https://media.beehiiv.com/www/homepage/Create-dark.png": "https://media.beehiiv.com/www/homepage/Create-dark.png",
+    "https://media.beehiiv.com/www/homepage/Grow-dark.png": "https://media.beehiiv.com/www/homepage/Grow-dark.png",
+    "https://media.beehiiv.com/www/homepage/Monetize-dark.png": "https://media.beehiiv.com/www/homepage/Monetize-dark.png",
+    "https://media.beehiiv.com/www/quote-headshots/SUNG–JAE-PARK.png": "https://media.beehiiv.com/www/quote-headshots/SUNG–JAE-PARK.png",
+    "https://media.beehiiv.com/www/homepage/2026/testimonials/time-logo.png": "https://media.beehiiv.com/www/homepage/2026/testimonials/time-logo.png",
+    "https://media.beehiiv.com/www/homepage/integrations-dark.png": "https://media.beehiiv.com/www/homepage/integrations-dark.png",
+    "https://media.beehiiv.com/www/homepage/bg-EndOfPageCTA.png": "https://media.beehiiv.com/www/homepage/bg-EndOfPageCTA.png",
+    "https://media.beehiiv.com/www/homepage/bg-EndOfPageCTA-mobile.png": "https://media.beehiiv.com/www/homepage/bg-EndOfPageCTA-mobile.png",
+    "https://beehiiv.cdn.prismic.io/beehiiv/TjsfNOPugaSJg7S8_LA-MAG.svg": "https://beehiiv.cdn.prismic.io/beehiiv/TjsfNOPugaSJg7S8_LA-MAG.svg",
+    "https://beehiiv.cdn.prismic.io/beehiiv/_7en1eRB-FzJ39tV_boston-globe.svg": "https://beehiiv.cdn.prismic.io/beehiiv/_7en1eRB-FzJ39tV_boston-globe.svg",
+    "https://images.prismic.io/beehiiv/aeZrD8BOoF08xJY5_time.png?auto=format,compress": "https://images.prismic.io/beehiiv/aeZrD8BOoF08xJY5_time.png?auto=format,compress",
+    "https://images.prismic.io/beehiiv/aeY7ksBOoF08xI8i_resume-worded.png?auto=format,compress": "https://images.prismic.io/beehiiv/aeY7ksBOoF08xI8i_resume-worded.png?auto=format,compress",
+    "https://beehiiv.cdn.prismic.io/beehiiv/Kqvm5zUJCSBbwlz1_blockworks.svg": "https://beehiiv.cdn.prismic.io/beehiiv/Kqvm5zUJCSBbwlz1_blockworks.svg",
+    "https://beehiiv.cdn.prismic.io/beehiiv/h19MjWloMA2Sal_Q_techcrunch.svg": "https://beehiiv.cdn.prismic.io/beehiiv/h19MjWloMA2Sal_Q_techcrunch.svg",
+    "https://images.prismic.io/beehiiv/aeuyScBOoF08xShr_matt.png?auto=format,compress": "https://images.prismic.io/beehiiv/aeuyScBOoF08xShr_matt.png?auto=format,compress",
+    "https://beehiiv.cdn.prismic.io/beehiiv/4aSpN-1OOpjV52J1_jws.svg": "https://beehiiv.cdn.prismic.io/beehiiv/4aSpN-1OOpjV52J1_jws.svg",
+    "https://beehiiv-images-production.s3.us-east-1.amazonaws.com/www/summer-release-2026/SR26-Banner-Logo.png": "https://beehiiv-images-production.s3.us-east-1.amazonaws.com/www/summer-release-2026/SR26-Banner-Logo.png",
+    "https://images.prismic.io/beehiiv/aeZq2cBOoF08xJYs_rally-blue.png?auto=format,compress": "https://images.prismic.io/beehiiv/aeZq2cBOoF08xJYs_rally-blue.png?auto=format,compress",
+    "https://media.beehiiv.com/www/homepage/2026/mesh/monetization.webp": "https://media.beehiiv.com/www/homepage/2026/mesh/monetization.webp",
+    "https://media.beehiiv.com/www/homepage/2026/community.png": "https://media.beehiiv.com/www/homepage/2026/community.png",
+    "https://media.beehiiv.com/www/fancy_arrow.svg": "https://media.beehiiv.com/cdn-cgi/image/format=auto/www/fancy_arrow.svg",
+    "https://beehiiv-images-production.s3.us-east-1.amazonaws.com/www/summer-release-2026/SR26-Banner-BG.png": "https://beehiiv-images-production.s3.us-east-1.amazonaws.com/www/summer-release-2026/SR26-Banner-BG.png",
+    "https://media.beehiiv.com/www/homepage/2026/mesh/digital-products.webp": "https://media.beehiiv.com/www/homepage/2026/mesh/digital-products.webp",
+    "https://media.beehiiv.com/www/homepage/2026/mesh/newsletters.webp": "https://media.beehiiv.com/www/homepage/2026/mesh/newsletters.webp",
+    "https://media.beehiiv.com/www/homepage/2026/newsletter.png": "https://media.beehiiv.com/www/homepage/2026/newsletter.png",
+    "https://beehiiv-marketing-images.s3.amazonaws.com/Redesign2023/favicon.png": "https://beehiiv-marketing-images.s3.amazonaws.com/Redesign2023/favicon.png",
+    "https://media.beehiiv.com/www/homepage/2026/monetization.png": "https://media.beehiiv.com/www/homepage/2026/monetization.png",
+    "https://media.beehiiv.com/www/homepage/2026/digital-products.png": "https://media.beehiiv.com/www/homepage/2026/digital-products.png",
+    "https://media.beehiiv.com/www/homepage/2026/mesh/podcasts.webp": "https://media.beehiiv.com/www/homepage/2026/mesh/podcasts.webp",
+    "https://media.beehiiv.com/www/homepage/2026-v2/integrations.png": "https://media.beehiiv.com/www/homepage/2026-v2/integrations.png",
+    "https://media.beehiiv.com/www/homepage/2026/podcasts.png": "https://media.beehiiv.com/www/homepage/2026/podcasts.png",
+    "https://media.beehiiv.com/www/homepage/2026/mesh/websites.webp": "https://media.beehiiv.com/www/homepage/2026/mesh/websites.webp",
+    "https://media.beehiiv.com/www/homepage/2026/websites.png": "https://media.beehiiv.com/www/homepage/2026/websites.png",
+    "https://media.beehiiv.com/www/homepage/hero-images/ab-test/hero-1.png": "https://media.beehiiv.com/www/homepage/hero-images/ab-test/hero-1.png",
+    "https://media.beehiiv.com/www/homepage/testimonials/miss-excel-logo.png": "https://media.beehiiv.com/www/homepage/testimonials/miss-excel-logo.png",
+    "https://media.beehiiv.com/www/navigation/casestudies-3.svg": "https://media.beehiiv.com/www/navigation/casestudies-3.svg",
+    "https://media.beehiiv.com/www/homepage/testimonials/miss-excel.png": "https://media.beehiiv.com/www/homepage/testimonials/miss-excel.png",
+    "https://media.beehiiv.com/www/navigation/casestudies-1.svg": "https://media.beehiiv.com/www/navigation/casestudies-1.svg",
+    "https://media.beehiiv.com/www/navigation/casestudies-2.svg": "https://media.beehiiv.com/www/navigation/casestudies-2.svg",
+    "https://media.beehiiv.com/www/homepage/hero-animation-2026/grid 1.png": "https://media.beehiiv.com/www/homepage/hero-animation-2026/grid 1.png",
+    "https://media.beehiiv.com/www/quote-headshots/coastal_recruiting_logo.jpg": "https://media.beehiiv.com/www/quote-headshots/coastal_recruiting_logo.jpg",
+    "https://media.beehiiv.com/www/navigation/tour.png": "https://media.beehiiv.com/www/navigation/tour.png",
+    "https://media.beehiiv.com/www/og-image/og-beehiiv.png": "https://media.beehiiv.com/www/og-image/og-beehiiv.png",
+    "https://media.beehiiv.com/www/quote-headshots/oliver-darcy-logo.png": "https://media.beehiiv.com/www/quote-headshots/oliver-darcy-logo.png",
+    "https://media.beehiiv.com/www/navigation/state-of-newsletter-2.png": "https://media.beehiiv.com/www/navigation/state-of-newsletter-2.png",
+    "https://media.beehiiv.com/www/quote-headshots/oliver-darcy02.png": "https://media.beehiiv.com/www/quote-headshots/oliver-darcy02.png",
+    "https://media.beehiiv.com/www/quote-headshots/david.png": "https://media.beehiiv.com/www/quote-headshots/david.png",
+    "https://embeds.beehiiv.com/img/beehiiv-logo.png": "https://embeds.beehiiv.com/img/beehiiv-logo.png",
+    "https://embeds.beehiiv.com/img/favicon.png": "https://embeds.beehiiv.com/img/favicon.png"
+  }
+}

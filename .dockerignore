@@ -1,0 +1,10 @@
+**
+!run.py
+!site/
+!site/**
+site/assets/brand/ativos-logo-transparent.png
+site/assets/section-9/logos/
+**/.env
+**/.env.*
+**/__pycache__/
+**/*.pyc

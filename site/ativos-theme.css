@@ -1,0 +1,1336 @@
+/* Ativos Tecnologia — website tokens from design/design_system/design_system_ativos.md. */
+@font-face {
+  font-family: "Inter Ativos";
+  src: url("/assets/brand/InterVariable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --color-accent-light: #92c1fd;
+  --color-text-primary: #fff;
+  --color-text-secondary: #8e95a5;
+  --color-bg-main: #0c0e12;
+  --color-bg-surface: #1a1d24;
+  --color-border: #1e2c3f;
+  --color-glow: #2b5899;
+  --ativos-font: "Inter Ativos", Inter, Arial, sans-serif;
+  --ativos-surface: rgb(26 29 36 / 80%);
+  --ativos-text-body: #b3bed0;
+  --ativos-content-width: 1200px;
+  --ativos-reading-measure: 62ch;
+  --ativos-gutter: clamp(20px, 4vw, 48px);
+  --ativos-section-space: clamp(64px, 6.7vw, 96px);
+  --ativos-radius: 16px;
+  --ativos-ease: cubic-bezier(.2, .65, .3, 1);
+}
+
+html[data-theme="ativos"] {
+  color-scheme: dark;
+  background: var(--color-bg-main);
+  accent-color: var(--color-accent-light);
+  scroll-padding-top: 96px;
+  scrollbar-color: var(--color-border) var(--color-bg-main);
+}
+
+html[data-theme="ativos"] body {
+  background: var(--color-bg-main) !important;
+  color: var(--color-text-primary);
+  font-family: var(--ativos-font) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[data-theme="ativos"] :is(button, input, select, textarea, .clash-grotesk-font-family) {
+  font-family: var(--ativos-font) !important;
+}
+
+html[data-theme="ativos"] :is(h1, h2, h3) {
+  font-family: var(--ativos-font) !important;
+  font-weight: 800 !important;
+  letter-spacing: -.03em;
+}
+
+html[data-theme="ativos"] :is(h1, h2) {
+  color: var(--color-text-primary);
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+html[data-theme="ativos"] h1 {
+  font-weight: 900 !important;
+  letter-spacing: -.04em;
+}
+
+html[data-theme="ativos"] h1 span {
+  background: none !important;
+  color: var(--color-accent-light) !important;
+  -webkit-text-fill-color: var(--color-accent-light) !important;
+}
+
+html[data-theme="ativos"] :is(.bg-cyber-ink, .bg-surface-page, .bg-surface-sunken) {
+  background-color: var(--color-bg-main) !important;
+}
+
+html[data-theme="ativos"] :is(.bg-surface-1, .bg-surface-2, [class*="bg-[#131125]"]) {
+  background-color: var(--color-bg-surface) !important;
+}
+
+html[data-theme="ativos"] :is(.bg-fusion-blue, .bg-accent-pink) {
+  background-color: var(--color-accent-light) !important;
+}
+
+html[data-theme="ativos"] :is(.text-secondary, .text-tertiary, .text-cyber-ink-200,
+  .text-cyber-ink-light-gray, .text-gray-400, [class*="text-[#9D9DB8]"],
+  [class*="text-[#AEB1B8]"], [class*="text-[#B3B8F0]"]) {
+  color: var(--color-text-secondary) !important;
+}
+
+html[data-theme="ativos"] :is(.text-accent-pink, .text-fusion-blue, [class*="text-[#FFC8EB]"],
+  [class*="text-[#FF5EC4]"], [class*="text-[#F93BB2]"]) {
+  color: var(--color-accent-light) !important;
+}
+
+html[data-theme="ativos"] :is(.border-default, [class*="border-[#4E4E6C]"],
+  [class*="border-[#29283B]"], [class*="border-[#D7D9F6]"]) {
+  border-color: var(--color-border) !important;
+}
+
+html[data-theme="ativos"] :is(a, button, summary):focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 5px;
+}
+
+html[data-theme="ativos"] ::selection {
+  background: var(--color-accent-light);
+  color: var(--color-bg-main);
+}
+
+/* Brand lockup: the original logo remains in the DOM for React's reconciliation. */
+.ativos-brand {
+  display: block !important;
+  flex: 0 0 auto;
+  width: 224px !important;
+  height: 64px !important;
+  background: url("/assets/brand/mdp-logo-transparent.webp") left center / contain no-repeat;
+}
+
+.ativos-brand > svg { visibility: hidden; }
+footer .ativos-brand { width: 224px !important; height: 64px !important; }
+
+html[data-theme="ativos"] .ativos-nav {
+  background: rgb(12 14 18 / 94%) !important;
+  border-color: var(--color-border) !important;
+  backdrop-filter: blur(8px);
+  padding-block: 12px;
+}
+
+/* Keep captured links out of view and keyboard focus while React hydrates. */
+html[data-theme="ativos"] nav:is([data-ref="mobile-nav"], [data-ref="desktop-nav"]) > :not(.ativos-header-content) {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ativos-header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+html[data-theme="ativos"] a[href*="app.beehiiv.com/signup"]:not(.custom-box-shadow-button),
+html[data-theme="ativos"] a[href="/demo"]:not(.custom-box-shadow-button) {
+  color: var(--color-text-primary) !important;
+  background: var(--ativos-surface) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(8px);
+}
+
+html[data-theme="ativos"] a[href*="app.beehiiv.com/signup"]:not(.custom-box-shadow-button):hover,
+html[data-theme="ativos"] a[href="/demo"]:not(.custom-box-shadow-button):hover {
+  color: var(--color-accent-light) !important;
+  border-color: var(--color-accent-light) !important;
+}
+
+/* Approved hero copy and full-section video background. */
+.ativos-hero { isolation: isolate; }
+html[data-theme="ativos"] .ativos-hero-title {
+  color: var(--color-accent-light) !important;
+  font-size: clamp(2rem, 3.2vw, 3.375rem) !important;
+  line-height: 1.08;
+  text-transform: none !important;
+}
+.ativos-hero-title br { display: none; }
+.ativos-hero-title br:first-of-type { display: initial; }
+.ativos-hero-title span { display: inline !important; }
+html[data-theme="ativos"] .ativos-hero-title span {
+  color: var(--color-text-primary) !important;
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+}
+.ativos-hero .ativos-hero-omitted { display: none !important; }
+.ativos-hero button.custom-box-shadow-button .custom-box-shadow-text > span:first-child {
+  display: none;
+}
+.ativos-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: min(65vw, 920px);
+  aspect-ratio: 1;
+  right: -10%;
+  top: -15%;
+  background: radial-gradient(ellipse, rgb(43 88 153 / 18%), transparent 66%);
+}
+
+html[data-theme="ativos"] .ativos-hero-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 440px;
+  background: #030c14 !important;
+}
+.ativos-hero-video::after { display: none; }
+.ativos-hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background-position: center;
+  background-size: cover;
+}
+.ativos-hero-film {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.ativos-hero-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(3 12 20 / 86%) 0%, rgb(3 12 20 / 58%) 30%, transparent 51%);
+}
+.ativos-hero-video .ativos-hero-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding: 36px 32px;
+}
+.ativos-hero-video .ativos-hero-container { max-width: 1440px; height: 100%; }
+.ativos-hero-video .ativos-hero-grid {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0;
+}
+.ativos-hero-video .ativos-hero-content {
+  flex: 0 0 auto;
+  width: min(36%, 460px);
+  align-items: flex-start;
+}
+.ativos-hero-video .ativos-hero-legacy-media { display: none !important; }
+.ativos-hero-legacy-media * { animation: none !important; }
+.ativos-hero-video .ativos-hero-content > p { max-width: 100%; }
+html[data-theme="ativos"] .ativos-hero-video .ativos-hero-title {
+  font-size: clamp(34px, 3vw, 44px) !important;
+  font-weight: 800 !important;
+  line-height: 1.12;
+  letter-spacing: -.04em;
+}
+.ativos-hero-video .ativos-hero-content .custom-box-shadow-text { font-size: 15px !important; }
+.ativos-hero-video .ativos-hero-content > .mt-6 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ativos-hero-motion-toggle {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  bottom: 20px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-bg-main);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+.ativos-hero-motion-toggle[hidden] { display: none; }
+.ativos-hero-motion-toggle:hover { color: var(--color-accent-light); }
+.ativos-hero-motion-toggle .ativos-play-icon,
+.ativos-hero-motion-toggle[data-paused="true"] .ativos-pause-icon { display: none; }
+.ativos-hero-motion-toggle[data-paused="true"] .ativos-play-icon { display: initial; }
+@media (min-width: 1280px) {
+  .ativos-hero-video .ativos-hero-inner { padding-inline: 128px; }
+}
+@media (min-width: 1024px) and (max-width: 1279px) {
+  html[data-theme="ativos"] .ativos-hero-video .ativos-hero-title { font-size: 32px !important; }
+  .ativos-hero-video .ativos-hero-content > p { font-size: 16px; line-height: 1.5; }
+  .ativos-hero-video .ativos-hero-content .custom-box-shadow-text { font-size: 14px !important; }
+}
+@media (max-width: 1023px) {
+  html[data-theme="ativos"] .ativos-hero-video {
+    aspect-ratio: 9 / 16;
+    min-height: 740px;
+  }
+  .ativos-hero-film { object-fit: contain; object-position: center bottom; }
+  .ativos-hero-background { background-size: contain; background-repeat: no-repeat; background-position: center bottom; }
+  .ativos-hero-background::after {
+    background: linear-gradient(180deg, rgb(3 12 20 / 86%) 0%, rgb(3 12 20 / 70%) 30%, transparent 48%);
+  }
+  .ativos-hero-video .ativos-hero-inner { padding: 48px 32px; }
+  .ativos-hero-video .ativos-hero-grid { align-items: flex-start; justify-content: center; }
+  .ativos-hero-video .ativos-hero-content { width: 100%; max-width: 600px; }
+}
+@media (max-width: 639px) {
+  .ativos-hero-video .ativos-hero-inner { padding: 24px 20px; }
+  html[data-theme="ativos"] .ativos-hero-video .ativos-hero-title {
+    font-size: clamp(28px, 7.9vw, 34px) !important;
+    letter-spacing: -.04em;
+    margin-bottom: 12px;
+  }
+  .ativos-hero-video .ativos-hero-content > p { font-size: 16px; line-height: 1.45; }
+  .ativos-hero-video .ativos-hero-content > .mt-6 { margin-top: 20px; gap: 10px; }
+  .ativos-hero-video .ativos-hero-content > .mt-6 > .custom-box-shadow-button { flex: 1; }
+  html[data-theme="ativos"] .ativos-hero-video .custom-box-shadow-text {
+    min-height: 44px;
+    padding: 8px 10px;
+    font-size: 13px !important;
+    gap: 0;
+  }
+}
+@media (max-width: 359px) {
+  html[data-theme="ativos"] iframe[src*="embeds.beehiiv.com"] { min-width: 0; }
+  .ativos-hero-video .ativos-hero-inner { padding: 20px 16px; }
+  .ativos-hero-video .ativos-hero-content > p { font-size: 15px; }
+  .ativos-hero-video .ativos-hero-content > .mt-6 { flex-direction: column; }
+  .ativos-hero-video .ativos-hero-content > .mt-6 > .custom-box-shadow-button { width: 100%; flex: auto; }
+  html[data-theme="ativos"] .ativos-hero-video .custom-box-shadow-text { padding-inline: 10px; font-size: 13px !important; }
+}
+
+/* Approved section copy keeps the original media and Ativos styling. */
+.ativos-copy-label { display: none; }
+.ativos-copy-intro { min-width: 0; flex: 1; }
+html[data-theme="ativos"] .ativos-copy-title {
+  text-transform: none !important;
+  font-size: clamp(1.875rem, 3.05vw, 2.75rem) !important;
+}
+.ativos-copy-intro > p { max-width: 50rem; }
+.ativos-operation-description strong { font-weight: 750; }
+.ativos-operation-legacy-media { display: none !important; }
+.ativos-operation-legacy-media * { animation: none !important; }
+.ativos-operation-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  background: #030c14;
+}
+.ativos-operation-video-media {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.ativos-operation-film {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.ativos-operation-motion-toggle { top: 12px; bottom: auto; right: 12px; }
+@media (max-width: 639px) {
+  .ativos-operation-video { aspect-ratio: 9 / 16; }
+  .ativos-operation-motion-toggle { top: 8px; right: 8px; }
+}
+.ativos-copy-header > .custom-box-shadow-button { flex-shrink: 0; }
+@media (max-width: 1023px) {
+  .ativos-copy-header { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 479px) {
+  :is(.ativos-copy-header, .ativos-copy-centered) > .custom-box-shadow-button { width: 100%; }
+  :is(.ativos-copy-header, .ativos-copy-centered) > .custom-box-shadow-button > .custom-box-shadow-text { max-width: none; }
+}
+
+html[data-theme="ativos"] :is(a, button).custom-box-shadow-button {
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  transition: transform 180ms var(--ativos-ease);
+}
+
+html[data-theme="ativos"] .custom-box-shadow-button > .custom-box-shadow-text {
+  background: var(--ativos-surface) !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 999px !important;
+  box-shadow: inset 0 1px rgb(255 255 255 / 3%) !important;
+  backdrop-filter: none;
+  font-weight: 600 !important;
+  transition: color 180ms, border-color 180ms, background 180ms;
+}
+
+html[data-theme="ativos"] .custom-box-shadow-button:hover > .custom-box-shadow-text {
+  color: var(--color-accent-light) !important;
+  border-color: var(--color-accent-light) !important;
+  background: rgb(30 44 63 / 85%) !important;
+}
+
+html[data-theme="ativos"] .custom-box-shadow-button:active { transform: translateY(1px); }
+html[data-theme="ativos"] :is(.custom-box-shadow-1, .custom-box-shadow-2) { display: none !important; }
+
+/* Content and pricing surfaces follow the 80% dark-surface treatment in the guide. */
+html[data-theme="ativos"] :is(.ativos-content-card, .ativos-plan) {
+  border: 1px solid var(--color-border) !important;
+  background: var(--ativos-surface) !important;
+  border-radius: var(--ativos-radius) !important;
+  box-shadow: inset 0 1px rgb(255 255 255 / 2%);
+}
+
+html[data-theme="ativos"] .ativos-content-card {
+  transition: border-color 200ms, background 200ms;
+}
+
+html[data-theme="ativos"] a.ativos-content-card:hover {
+  border-color: var(--color-accent-light) !important;
+  background: rgb(26 29 36 / 100%) !important;
+}
+
+html[data-theme="ativos"] .ativos-content-card::before { display: none !important; }
+
+/* Supplied artwork stays complete inside the approved responsive image frames. */
+.ativos-solution-picture {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: var(--solution-mobile-width);
+  aspect-ratio: var(--solution-mobile-aspect);
+}
+.ativos-solution-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .ativos-solution-picture {
+    max-width: var(--solution-tablet-width);
+    aspect-ratio: var(--solution-tablet-aspect);
+  }
+}
+@media (min-width: 1024px) {
+  .ativos-solution-picture {
+    max-width: var(--solution-desktop-width);
+    aspect-ratio: var(--solution-desktop-aspect);
+  }
+}
+
+html[data-theme="ativos"] .ativos-plan-title { color: var(--color-text-primary); font-weight: 800; }
+html[data-theme="ativos"] .ativos-plan li { color: #d5dbe5; }
+html[data-theme="ativos"] .ativos-plan [class*="bg-[#D9DBDF]"] { background: var(--color-accent-light); }
+html[data-theme="ativos"] .ativos-plan button { border-color: var(--color-border); }
+
+/* Four matching frames: one column on phones, two on tablets, four on wide screens. */
+.ativos-dashboards .ativos-dashboard-grid {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
+  grid-auto-rows: auto;
+}
+.ativos-dashboards .ativos-dashboard-grid > .ativos-plan { min-width: 0; }
+.ativos-dashboard-grid .ativos-plan-title { min-height: 2lh; }
+.ativos-dashboard-card-subtitle {
+  margin-top: 1rem;
+  color: var(--ativos-text-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+.ativos-dashboard-grid .ativos-dashboard-features { row-gap: 1rem; }
+.ativos-dashboard-features > li { align-items: flex-start; line-height: 1.5; }
+.ativos-dashboard-features > li > span:first-child { flex-shrink: 0; margin-top: .5rem; }
+.ativos-dashboard-features strong { color: var(--color-text-primary); font-weight: 700; }
+.ativos-dashboard-copy summary { cursor: pointer; }
+.ativos-dashboard-copy details[open] summary svg { transform: rotate(180deg); }
+@media (min-width: 768px) {
+  .ativos-dashboards .ativos-dashboard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .ativos-dashboards .ativos-dashboard-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+html[data-theme="ativos"] .ativos-testimonials {
+  background: var(--ativos-surface) !important;
+  border: 1px solid var(--color-border);
+  border-radius: var(--ativos-radius);
+}
+
+html[data-theme="ativos"] .ativos-testimonials button {
+  color: var(--color-text-secondary);
+  border-radius: 999px;
+}
+
+html[data-theme="ativos"] .ativos-testimonials button:hover { color: var(--color-accent-light); }
+.ativos-platform-testimonials { width: 100%; min-width: 0; }
+.ativos-platform-testimonials :is(.ativos-platform-legacy-copy, .ativos-platform-legacy-image) {
+  display: none !important;
+}
+.ativos-platform-tab-media { width: 100%; min-width: 0; }
+.ativos-platform-tab-picture { display: block; }
+.ativos-platform-tab-picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (min-width: 1024px) {
+  .ativos-platform-tab-picture { aspect-ratio: 8 / 5; }
+  .ativos-platform-tab-picture img { height: 100%; }
+}
+html[data-theme="ativos"] .ativos-platform-tab-title {
+  margin: 0 0 16px;
+  color: var(--color-accent-light);
+  font-size: clamp(26px, 2.5vw, 34px);
+  font-weight: 700 !important;
+  line-height: 1.1;
+  letter-spacing: -.03em;
+}
+html[data-theme="ativos"] button[aria-hidden][class*="fixed"] {
+  background: var(--color-bg-surface) !important;
+  color: var(--color-text-primary) !important;
+  border-color: var(--color-border) !important;
+}
+html[data-theme="ativos"] .ativos-intent-link {
+  background: var(--ativos-surface);
+  border-color: var(--color-border) !important;
+  border-radius: 8px;
+}
+
+html[data-theme="ativos"] .ativos-intent-link:hover {
+  color: var(--color-accent-light);
+  border-color: var(--color-accent-light) !important;
+}
+
+html[data-theme="ativos"] .ativos-faq summary {
+  border-color: var(--color-border) !important;
+  padding-inline: 0;
+}
+
+html[data-theme="ativos"] .ativos-faq summary h3 {
+  font-size: 18px;
+  font-weight: 600 !important;
+  letter-spacing: -.02em;
+}
+
+html[data-theme="ativos"] .ativos-faq details[open] summary { color: var(--color-accent-light); }
+html[data-theme="ativos"] .ativos-faq details[open] h3 { color: var(--color-accent-light); }
+html[data-theme="ativos"] .ativos-faq .faq-answer { color: var(--color-text-secondary); }
+
+html[data-theme="ativos"] .ativos-final-cta .ativos-cta-panel {
+  top: 55% !important;
+  width: min(82%, 720px);
+  max-width: none;
+  padding: 36px 40px;
+  gap: 24px;
+  color: var(--color-text-primary);
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+html[data-theme="ativos"] .ativos-cta-panel p { color: var(--color-text-secondary); }
+html[data-theme="ativos"] .ativos-cta-panel h2 { color: var(--color-text-primary); }
+
+/* Captured cards and the previous illustration stay mounted for React hydration. */
+.ativos-productivity-intro > [hidden] { display: none; }
+.ativos-productivity-legacy-cta[hidden] { display: none !important; }
+
+/* Section 6: full-card supplied artwork, with copy over its quiet upper area. */
+.ativos-benefits-carousel {
+  --mdp-bg: #0c0e12;
+  --mdp-surface: #151922;
+  --mdp-blue: 43 88 153;
+  --mdp-card-border: rgb(146 193 253 / 10%);
+  --mdp-transition: 240ms;
+  min-width: 0;
+  width: 100%;
+  margin-top: 28px;
+  background-color: var(--mdp-bg);
+}
+.ativos-productivity-conclusion {
+  max-width: 54ch;
+  margin: 28px auto 0;
+  color: var(--color-text-primary);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+}
+.ativos-benefits-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.ativos-benefits-arrow {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  place-items: center;
+  appearance: none;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform var(--mdp-transition) ease-out;
+}
+.ativos-benefits-arrow svg { width: 24px; height: 24px; }
+.ativos-benefits-arrow:disabled { opacity: .35; cursor: default; }
+.ativos-benefits-arrow:enabled:hover { color: var(--color-accent-light); }
+.ativos-benefits-arrow:enabled:active { transform: scale(.94); }
+.ativos-benefits-track {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 4px 0 12px;
+  scrollbar-width: none;
+}
+.ativos-benefits-track::-webkit-scrollbar { display: none; }
+.ativos-benefit-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-rows: auto minmax(160px, 1fr);
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: min(62vw, 256px);
+  min-height: 520px;
+  padding: 0;
+  overflow: hidden;
+  appearance: none;
+  border: 1px solid var(--mdp-card-border);
+  border-radius: 16px;
+  background-color: var(--mdp-surface);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 2%);
+  color: var(--color-text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: width 280ms cubic-bezier(.2, 0, 0, 1), border-color var(--mdp-transition) ease-out;
+}
+.ativos-benefit-card[aria-expanded="true"] {
+  width: min(calc(100vw - 72px), 448px);
+  border-color: rgb(var(--mdp-blue) / 22%);
+}
+.ativos-benefit-card::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.ativos-benefit-card::after {
+  background: radial-gradient(240px circle at var(--mdp-pointer-x, 50%) var(--mdp-pointer-y, 25%), rgb(var(--mdp-blue) / 10%), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--mdp-transition) ease-out;
+}
+.ativos-benefit-visual {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  min-width: 0;
+  pointer-events: none;
+}
+.ativos-benefit-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center top;
+}
+.ativos-benefit-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+  padding: 24px 24px 40px;
+  /* Grow this scrim with the copy, including when text is enlarged. */
+  background: linear-gradient(180deg, rgb(5 12 24 / 88%) 0%, rgb(5 12 24 / 88%) calc(100% - 40px), transparent 100%);
+}
+.ativos-benefit-title {
+  display: block;
+  color: var(--color-accent-light);
+  font-size: clamp(22px, 1.8vw, 24px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+  overflow-wrap: anywhere;
+}
+.ativos-benefit-description {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+  color: var(--ativos-text-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease-out, visibility 200ms;
+}
+.ativos-benefit-card[aria-expanded="true"] .ativos-benefit-description {
+  max-height: none;
+  margin-top: 12px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--mdp-transition) ease-out 40ms, visibility 0s;
+}
+.ativos-benefits-arrow:focus-visible, .ativos-benefit-card:focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: -4px;
+}
+@media (min-width: 520px) and (max-width: 1023px) {
+  /* The wider tablet card needs more height to preserve the lower artwork. */
+  .ativos-benefit-card { min-height: 640px; }
+}
+@media (min-width: 1024px) {
+  /* Share the available row: one expanded card and four compact cards. */
+  .ativos-benefit-card {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 0;
+    min-height: 560px;
+    transition: flex-grow 280ms cubic-bezier(.2, 0, 0, 1), border-color var(--mdp-transition) ease-out;
+  }
+  .ativos-benefit-card[aria-expanded="true"] { flex-grow: 1.75; width: 0; }
+  .ativos-benefit-body { padding-inline: 16px; }
+  .ativos-benefit-title { font-size: 20px; }
+  .ativos-benefit-card[aria-expanded="true"] .ativos-benefit-title { font-size: clamp(22px, 1.8vw, 24px); }
+  .ativos-benefit-description { font-size: 18px; }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .ativos-benefit-body { padding-inline: 12px; }
+  .ativos-benefit-title { font-size: 18px; }
+  .ativos-benefit-card[aria-expanded="true"] .ativos-benefit-body { padding-inline: 16px; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .ativos-benefit-card:hover { border-color: rgb(var(--mdp-blue) / 30%); }
+  .ativos-benefit-card:hover::after { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ativos-benefits-arrow, .ativos-benefit-card, .ativos-benefit-description,
+  .ativos-benefit-card::after,
+  .ativos-benefit-card[aria-expanded="true"] .ativos-benefit-description { transition: none; }
+  .ativos-benefit-card::after { display: none; }
+}
+
+/* Section 7: connected implantation timeline adapted from the supplied HTML. */
+.ativos-onboarding-legacy[hidden] { display: none !important; }
+html[data-theme="ativos"] .ativos-onboarding-timeline {
+  background: var(--color-bg-main);
+}
+.ativos-journey {
+  --journey-progress: 0;
+  --journey-surface: #151922;
+  --journey-ink: var(--ativos-text-body);
+  --journey-line: var(--color-border);
+  margin-top: 48px;
+}
+.ativos-journey-timeline { position: relative; max-width: 720px; margin-inline: auto; }
+.ativos-journey-steps { display: flex; flex-direction: column; gap: 20px; padding: 0; margin: 0; list-style: none; }
+.ativos-journey-track { position: absolute; z-index: 0; left: 20px; top: 21px; width: 2px; background: var(--journey-line); }
+.ativos-journey-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--color-accent-light);
+  transform: scaleY(var(--journey-progress));
+  transform-origin: center top;
+}
+.ativos-journey-step { position: relative; z-index: 1; display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 16px; min-width: 0; align-items: start; }
+.ativos-journey-dot {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #354762;
+  border-radius: 50%;
+  background: #101722;
+  color: var(--journey-ink);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  transition: border-color 240ms ease-out, background-color 240ms ease-out, color 240ms ease-out;
+}
+.ativos-journey-step.is-reached .ativos-journey-dot { border-color: var(--color-accent-light); color: var(--color-bg-main); background: var(--color-accent-light); }
+.ativos-journey-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--journey-line);
+  border-radius: 16px;
+  background: var(--journey-surface);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 2%);
+  transition: transform 240ms ease-out, border-color 240ms ease-out;
+}
+.ativos-journey-icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #354f7d;
+  border-radius: 12px;
+  background: #172333;
+  color: var(--color-accent-light);
+}
+.ativos-journey-icon svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ativos-journey-mini {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 100px;
+  max-width: 400px;
+  margin: 20px 0;
+  padding: 12px 8px;
+  border: 1px solid #26344a;
+  border-radius: 10px;
+  background: #111b29;
+}
+.ativos-journey-chip { padding: 6px 8px; border-radius: 6px; background: #243656; color: #c1d6ff; font-size: 13px; font-weight: 600; line-height: 1.4; white-space: nowrap; }
+.ativos-journey-cloud { width: 100%; padding: 8px; border-radius: 8px; background: #20314c; color: #c1d6ff; font-size: 14px; font-weight: 600; text-align: center; }
+.ativos-journey-cloud span { display: block; margin-top: 6px; color: var(--journey-ink); font-size: 13px; line-height: 1.4; font-weight: 400; }
+.ativos-journey-conversions { display: grid; width: 100%; gap: 6px; }
+.ativos-journey-conversions span { padding: 6px 8px; border-radius: 6px; background: #20314c; color: #c1d6ff; font-size: 13px; line-height: 1.35; }
+.ativos-journey-chart { display: flex; align-items: flex-end; justify-content: center; width: 100%; height: 64px; gap: 7px; }
+.ativos-journey-chart span { width: 13%; border-radius: 4px 4px 0 0; background: linear-gradient(#92c1fd, #4679da); }
+.ativos-journey-clients { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 24px; width: 100%; gap: 6px; align-items: stretch; }
+.ativos-journey-clients span { display: grid; place-items: center; padding: 10px 4px; border-radius: 6px; background: #243656; color: #c1d6ff; font-size: 13px; line-height: 1.4; text-align: center; }
+html[data-theme="ativos"] .ativos-journey-card h3 { margin: 0 0 12px; color: var(--color-text-primary); font-size: 18px; line-height: 1.35; letter-spacing: -.02em; }
+.ativos-journey-card p { margin: 0; color: var(--journey-ink); font-size: 16px; line-height: 1.65; }
+.ativos-journey-optional { display: block; margin-top: 12px; color: var(--color-accent-light); font-size: 13px; line-height: 1.5; }
+.ativos-journey-conclusion { max-width: 780px; margin: 36px auto 0; color: var(--journey-ink); font-size: 18px; line-height: 1.6; text-align: center; }
+.ativos-journey-conclusion strong { color: var(--color-text-primary); font-weight: 600; }
+@media (min-width: 1024px) {
+  .ativos-journey-timeline { max-width: none; }
+  .ativos-journey-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+  .ativos-journey-step { display: flex; flex-direction: column; gap: 20px; align-items: stretch; }
+  .ativos-journey-dot { align-self: center; flex: 0 0 42px; }
+  .ativos-journey-card { flex: 1; min-height: 360px; padding: 20px 16px; }
+  .ativos-journey-mini { height: 124px; min-height: 124px; }
+  html[data-theme="ativos"] .ativos-journey-card h3 { min-height: 4.05em; }
+  .ativos-journey-fill { transform: scaleX(var(--journey-progress)); transform-origin: left center; }
+}
+@media (max-width: 520px) {
+  .ativos-journey { margin-top: 36px; }
+  .ativos-journey-step { gap: 12px; }
+  .ativos-journey-card { padding: 18px 16px; }
+  .ativos-journey-mini { margin-block: 18px; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .ativos-journey-card:hover { transform: translateY(-4px); border-color: #5679ae; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ativos-journey-dot, .ativos-journey-card { transition: none; }
+  .ativos-journey-card:hover { transform: none; }
+}
+
+html[data-theme="ativos"] footer {
+  background: var(--color-bg-main) !important;
+  border-color: var(--color-border) !important;
+}
+
+html[data-theme="ativos"] footer.ativos-footer { padding: 28px 20px; }
+.ativos-footer-content { display: flex; align-items: center; justify-content: flex-end; max-width: 1280px; margin-inline: auto; }
+@media (min-width: 768px) {
+  html[data-theme="ativos"] footer.ativos-footer { padding-inline: 32px; }
+}
+@media (min-width: 1280px) {
+  html[data-theme="ativos"] footer.ativos-footer { padding-inline: 128px; }
+}
+
+/* The existing embedded form keeps its original fields and copy. */
+html[data-ativos-embed="true"] body {
+  background: transparent !important;
+  font-family: var(--ativos-font) !important;
+  color: var(--color-text-primary);
+}
+
+html[data-ativos-embed="true"] input {
+  background: var(--color-bg-surface) !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px 0 0 8px !important;
+  font-family: var(--ativos-font) !important;
+}
+
+html[data-ativos-embed="true"] input::placeholder { color: var(--color-text-secondary) !important; }
+html[data-ativos-embed="true"] button {
+  background: var(--color-bg-surface) !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0 8px 8px 0 !important;
+  font-family: var(--ativos-font) !important;
+}
+html[data-ativos-embed="true"] button:hover {
+  border-color: var(--color-accent-light) !important;
+  color: var(--color-accent-light) !important;
+}
+
+@media (max-width: 767px) {
+  .ativos-nav .ativos-brand { width: 192px !important; height: 56px !important; }
+  html[data-theme="ativos"] .ativos-nav { padding-block: 10px; }
+  html[data-theme="ativos"] h1 { font-size: clamp(32px, 10.1vw, 44px); line-height: 1.07; }
+  html[data-theme="ativos"] h2 { font-size: clamp(28px, 8.4vw, 38px); }
+  html[data-theme="ativos"] .ativos-faq summary h3 { font-size: 16px; line-height: 1.5; }
+  html[data-theme="ativos"] .ativos-final-cta .ativos-cta-panel {
+    width: calc(100% - 48px);
+    padding: 24px 16px;
+    gap: 18px;
+  }
+  footer .ativos-brand { width: 192px !important; height: 56px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="ativos"] { scroll-behavior: auto !important; }
+  html[data-theme="ativos"] :is(a, button) { transition-duration: 0ms !important; }
+}
+
+/* Shared finish for the existing nine sections; captured layout and media stay intact. */
+.ativos-section { scroll-margin-top: 96px; }
+.ativos-section > .ativos-section-frame {
+  padding-block: var(--ativos-section-space);
+  padding-inline: max(var(--ativos-gutter), calc((100% - var(--ativos-content-width)) / 2));
+}
+.ativos-header-content, .ativos-footer-content { max-width: var(--ativos-content-width); }
+html[data-theme="ativos"] .ativos-nav {
+  padding-inline: max(var(--ativos-gutter), calc((100% - var(--ativos-content-width)) / 2));
+}
+html[data-theme="ativos"] .ativos-nav .ativos-brand { width: 224px !important; height: 64px !important; }
+html[data-theme="ativos"] footer.ativos-footer {
+  padding: 32px max(var(--ativos-gutter), calc((100% - var(--ativos-content-width)) / 2));
+}
+.ativos-copy-header { gap: 40px; }
+.ativos-copy-intro { gap: 20px; }
+.ativos-copy-intro > .ativos-copy-title { max-width: 30ch; }
+.ativos-copy-intro > p {
+  max-width: var(--ativos-reading-measure);
+  color: var(--ativos-text-body);
+  font-size: clamp(1rem, 1.35vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+.ativos-copy-intro > p strong { color: var(--color-text-primary); font-weight: 600; }
+:is(.ativos-dashboards-intro, .ativos-productivity-intro, .ativos-onboarding-intro, .ativos-faq-intro) {
+  align-items: center;
+  max-width: 980px;
+  margin-inline: auto;
+  text-align: center;
+}
+:is(.ativos-dashboards-intro, .ativos-productivity-intro, .ativos-onboarding-intro, .ativos-faq-intro) > p {
+  max-width: var(--ativos-reading-measure);
+  margin-inline: auto;
+}
+.ativos-productivity-intro { max-width: none; }
+.ativos-operation-video { overflow: hidden; border-radius: var(--ativos-radius); }
+.ativos-hero-video .ativos-hero-inner {
+  padding-inline: max(var(--ativos-gutter), calc((100% - var(--ativos-content-width)) / 2));
+}
+.ativos-hero-video .ativos-hero-content { width: min(41%, 492px); }
+.ativos-hero-video .ativos-hero-content > p {
+  max-width: 460px;
+  color: #d7e2f0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+.ativos-hero-video .ativos-hero-content > .mt-6 { margin-top: 28px; }
+html[data-theme="ativos"] .custom-box-shadow-button > .custom-box-shadow-text {
+  min-height: 48px;
+  padding-inline: 24px;
+  font-size: 15px;
+  line-height: 1.4;
+  backdrop-filter: none;
+  transition: color 180ms var(--ativos-ease), border-color 180ms var(--ativos-ease), background-color 180ms var(--ativos-ease);
+}
+html[data-theme="ativos"] .ativos-primary-action > .custom-box-shadow-text {
+  background: var(--color-accent-light) !important;
+  color: var(--color-bg-main) !important;
+  border-color: var(--color-accent-light) !important;
+  box-shadow: none !important;
+}
+html[data-theme="ativos"] .ativos-primary-action:hover > .custom-box-shadow-text {
+  background: #b4d5ff !important;
+  color: var(--color-bg-main) !important;
+  border-color: #b4d5ff !important;
+}
+html[data-theme="ativos"] :is(a, button, summary, [role="tabpanel"]):focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 4px;
+}
+html[data-theme="ativos"] :is(h1, h2, .ativos-plan-title)[tabindex="-1"]:focus-visible {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+/* Abas: a compact selector, a complete illustration and a readable product description. */
+html[data-theme="ativos"] .ativos-platform-testimonials {
+  margin-top: 0;
+  overflow: hidden;
+  background: var(--ativos-surface) !important;
+}
+.ativos-platform-testimonials [role="tablist"] {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: min(calc(100% - 48px), 560px);
+  max-width: none;
+  margin: 24px auto;
+  padding: 4px;
+  gap: 4px;
+  border: 0;
+  background: var(--color-bg-main);
+}
+html[data-theme="ativos"] .ativos-platform-testimonials [role="tab"] {
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  color: var(--ativos-text-body);
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 180ms var(--ativos-ease), color 180ms var(--ativos-ease), border-color 180ms var(--ativos-ease);
+}
+html[data-theme="ativos"] .ativos-platform-testimonials [role="tab"][aria-selected="true"] {
+  border-color: var(--color-border);
+  background: var(--color-bg-surface) !important;
+  color: var(--color-accent-light) !important;
+}
+.ativos-platform-tab-layout { margin-top: 0; padding: 8px 28px 28px; gap: 32px; }
+.ativos-platform-tab-picture { overflow: hidden; border-radius: 10px; }
+.ativos-platform-tab-copy { min-width: 0; padding: 8px 12px; }
+.ativos-platform-tab-copy > p {
+  margin-bottom: 0;
+  color: var(--ativos-text-body);
+  font-size: clamp(17px, 1.5vw, 21px);
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+/* Functional cards keep their existing grid, artwork and mobile disclosures. */
+.ativos-solutions-cards { gap: 20px; }
+html[data-theme="ativos"] .ativos-solutions-cards > .ativos-content-card { padding: 28px; gap: 18px; }
+html[data-theme="ativos"] .ativos-solutions-cards h3 {
+  font-size: 22px;
+  font-weight: 650 !important;
+  line-height: 1.3;
+  letter-spacing: -.025em;
+}
+.ativos-solutions-cards .ativos-content-card > p { color: var(--ativos-text-body); font-weight: 400; line-height: 1.7; }
+.ativos-dashboard-grid { margin-top: 48px; gap: 20px; }
+html[data-theme="ativos"] .ativos-dashboard-grid > .ativos-plan { padding: 28px 24px; }
+html[data-theme="ativos"] .ativos-dashboard-grid .ativos-plan-title {
+  font-size: 22px;
+  font-weight: 650;
+  line-height: 1.3;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.ativos-dashboard-card-subtitle { margin-top: 16px; }
+html[data-theme="ativos"] .ativos-dashboard-features > li { color: var(--ativos-text-body); font-weight: 400; line-height: 1.65; }
+.ativos-dashboard-features strong { font-weight: 600; }
+.ativos-dashboard-grid :is(button[aria-expanded], summary) {
+  min-height: 48px;
+  padding-block: 12px;
+  color: var(--color-accent-light);
+}
+.ativos-benefits-controls { margin-bottom: 20px; }
+.ativos-benefits-track { gap: 16px; padding-top: 6px; padding-bottom: 16px; }
+.ativos-productivity-conclusion { max-width: 62ch; margin-top: 32px; font-size: 18px; font-weight: 500; line-height: 1.65; }
+.ativos-journey-steps { gap: 24px; }
+.ativos-journey-card { box-shadow: none; }
+.ativos-journey-step.is-reached .ativos-journey-card { border-color: #385779; }
+html[data-theme="ativos"] .ativos-journey-card h3 { font-weight: 650 !important; line-height: 1.4; }
+.ativos-journey-mini { background: #111923; border-color: var(--color-border); }
+.ativos-journey-chart span { background: var(--color-accent-light); }
+.ativos-journey-conclusion { max-width: 66ch; }
+html[data-theme="ativos"] .ativos-faq details { max-width: 960px; margin-inline: auto; }
+html[data-theme="ativos"] .ativos-faq summary { min-height: 76px; padding: 22px 0; gap: 20px; }
+html[data-theme="ativos"] .ativos-faq summary h3 { line-height: 1.5; }
+html[data-theme="ativos"] .ativos-faq .faq-answer { max-width: 74ch; color: var(--ativos-text-body); font-size: 16px; line-height: 1.75; padding-bottom: 24px; }
+.ativos-integrations [class*="border-[#FF5EC4]"] { border-color: var(--color-border); border-top-width: 1px; }
+.ativos-integrations [class*="border-[#FF5EC4]"] > p { min-width: 0; overflow-wrap: anywhere; }
+.ativos-integrations svg { color: var(--color-accent-light); stroke: currentColor; }
+.ativos-integrations svg [stroke]:not([stroke="none"]) { stroke: currentColor; }
+.ativos-integrations svg [fill]:not([fill="none"]) { fill: currentColor; }
+html[data-theme="ativos"] .ativos-benefit-card:focus-visible { outline-offset: -4px; }
+
+@media (min-width: 1024px) {
+  .ativos-journey-steps { gap: 16px; }
+  html[data-theme="ativos"] .ativos-journey-card h3 { min-height: 4.2em; }
+  html[data-theme="ativos"] .ativos-hero-video { min-height: 520px; }
+}
+@media (max-width: 1023px) {
+  .ativos-copy-header { gap: 28px; }
+  .ativos-hero-video .ativos-hero-content { width: 100%; }
+  .ativos-hero-video .ativos-hero-content > p { max-width: 60ch; }
+}
+@media (max-width: 767px) {
+  html[data-theme="ativos"] .ativos-nav .ativos-brand { width: 192px !important; height: 56px !important; }
+  .ativos-platform-testimonials [role="tablist"] { width: calc(100% - 24px); margin-block: 16px; gap: 0; }
+  html[data-theme="ativos"] .ativos-platform-testimonials [role="tab"] { padding-inline: 4px; font-size: 14px; }
+  .ativos-platform-tab-layout { padding: 0; gap: 24px; }
+  .ativos-platform-tab-picture { border-radius: 0; }
+  .ativos-platform-tab-copy { padding: 0 24px 28px; }
+  html[data-theme="ativos"] .ativos-solutions-cards > .ativos-content-card { padding: 24px; }
+  .ativos-dashboard-grid .ativos-plan-title { min-height: 0; }
+  html[data-theme="ativos"] .ativos-dashboard-grid > .ativos-plan { padding: 24px; }
+  .ativos-faq-intro { margin-bottom: 32px; }
+  html[data-theme="ativos"] .ativos-faq summary { padding-block: 20px; }
+  .ativos-journey-step { grid-template-columns: 36px minmax(0, 1fr); }
+  .ativos-journey-dot { width: 36px; height: 36px; }
+  .ativos-journey-card { padding: 20px 18px; }
+}
+@media (max-width: 639px) {
+  .ativos-hero-video .ativos-hero-inner { padding-top: 28px; }
+  html[data-theme="ativos"] .ativos-hero-video .ativos-hero-title { font-size: clamp(28px, 7.8vw, 34px) !important; }
+  .ativos-hero-video .ativos-hero-content > p { font-size: 16px; line-height: 1.6; }
+  .ativos-hero-video .ativos-hero-content > .mt-6 { margin-top: 24px; }
+  html[data-theme="ativos"] .ativos-hero-video .custom-box-shadow-text { padding-inline: 10px; font-size: 13px !important; }
+  .ativos-copy-intro > .ativos-copy-title { font-size: clamp(28px, 7.7vw, 34px) !important; line-height: 1.18; }
+  .ativos-copy-intro { gap: 18px; }
+  .ativos-copy-intro > p { line-height: 1.7; }
+  .ativos-benefit-description { font-size: 16px; }
+  .ativos-productivity-conclusion, .ativos-journey-conclusion { font-size: 16px; }
+}
+@media (max-width: 359px) {
+  .ativos-platform-testimonials [role="tablist"] { grid-template-columns: repeat(2, minmax(0, 1fr)); border-radius: 16px; }
+  .ativos-journey-step { gap: 10px; }
+  .ativos-journey-card { padding: 18px 14px; }
+}
+@media (hover: hover) and (pointer: fine) {
+  html[data-theme="ativos"] .custom-box-shadow-button:hover { transform: translateY(-2px); }
+  html[data-theme="ativos"] .custom-box-shadow-button:active { transform: translateY(0); }
+  html[data-theme="ativos"] .ativos-platform-testimonials [role="tab"]:hover { color: var(--color-text-primary); }
+  .ativos-journey-card:hover { transform: translateY(-2px); }
+  html[data-theme="ativos"] .ativos-faq summary:hover h3 { color: var(--color-accent-light); }
+}
+@keyframes ativos-hero-arrive {
+  from { opacity: .85; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ativos-hero-content > :is(h1, p, .mt-6) { animation: ativos-hero-arrive 540ms var(--ativos-ease) both; }
+  .ativos-hero-content > p { animation-delay: 70ms; }
+  .ativos-hero-content > .mt-6 { animation-delay: 140ms; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-theme="ativos"] :is(.custom-box-shadow-button, .ativos-journey-card):hover { transform: none; }
+  .ativos-platform-testimonials [role="tabpanel"] * { animation: none !important; transition: none !important; }
+}
+
+/* Visual audit: preserve the artwork and copy while giving them clear reading space. */
+html[data-theme="ativos"] :is(a, button, summary, [role="tab"]) {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgb(146 193 253 / 20%);
+  scroll-margin-block: 100px 24px;
+}
+html[data-theme="ativos"] .ativos-platform-testimonials [role="tabpanel"]:focus-visible {
+  outline-offset: -4px;
+}
+.ativos-skip-link {
+  position: fixed;
+  z-index: 10000;
+  top: 12px;
+  left: max(20px, env(safe-area-inset-left));
+  padding: 14px 20px;
+  border-radius: 8px;
+  background: var(--color-accent-light);
+  color: var(--color-bg-main);
+  font: 600 16px/1.5 var(--ativos-font);
+  clip-path: inset(100%);
+  transform: translateY(calc(-100% - 24px));
+}
+.ativos-skip-link:focus { clip-path: none; transform: translateY(0); }
+.ativos-marquee { position: relative; padding-bottom: 52px; }
+/* Imagegen white lockups replace the captured publisher logos after hydration. */
+.ativos-legacy-logos { display: none !important; }
+.ativos-social-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  animation-duration: 30s;
+}
+.ativos-social-group {
+  --ativos-logo-gap: clamp(32px, 4vw, 56px);
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--ativos-logo-gap);
+  min-width: 1280px;
+  margin: 0;
+  padding: 0 calc(var(--ativos-logo-gap) / 2);
+  list-style: none;
+}
+.ativos-social-item {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  height: 40px;
+}
+.ativos-social-logo {
+  display: block;
+  width: auto;
+  height: 32px;
+  max-width: 172px;
+  object-fit: contain;
+}
+@media (max-width: 767px) {
+  .ativos-social-group { min-width: 1120px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ativos-social-track { animation: none; transform: none; }
+  .ativos-social-track > .trusted-newsletters-duplicate { display: none; }
+}
+.ativos-marquee-toggle {
+  position: absolute;
+  /* Keep the control in the opaque center of the retained edge-fade mask. */
+  left: calc(50% - 22px);
+  bottom: 4px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-primary);
+  background: var(--color-bg-surface);
+  cursor: pointer;
+}
+.ativos-marquee-toggle:hover { color: var(--color-accent-light); border-color: currentColor; }
+.ativos-marquee[data-paused="true"] :is(.trusted-newsletters-track, .ticker-image-container),
+.ativos-marquee:hover :is(.trusted-newsletters-track, .ticker-image-container),
+.ativos-marquee:focus-within :is(.trusted-newsletters-track, .ticker-image-container) { animation-play-state: paused; }
+.ativos-text-marquee .ticker-image-container > span { color: var(--ativos-text-body); }
+.ativos-text-marquee svg [stroke] { stroke: var(--color-accent-light); }
+.ativos-text-marquee svg [fill]:not([fill="none"]) { fill: var(--color-accent-light); }
+.ativos-journey-dot { font-variant-numeric: tabular-nums; }
+.ativos-integrations img { border-radius: 12px; }
+@media (min-width: 1024px) {
+  .ativos-hero-background::after {
+    background: linear-gradient(90deg, rgb(3 12 20 / 94%) 0%, rgb(3 12 20 / 88%) 32%, rgb(3 12 20 / 42%) 43%, transparent 55%);
+  }
+  .ativos-hero-video .ativos-hero-content > p { max-width: 410px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  html[data-theme="ativos"] .ativos-hero-video {
+    aspect-ratio: auto;
+    min-height: clamp(780px, 110vw, 960px);
+  }
+  .ativos-hero-video .ativos-hero-inner { padding-top: 32px; }
+  .ativos-hero-video .ativos-hero-content { max-width: none; }
+  .ativos-hero-background::after {
+    background: linear-gradient(180deg, rgb(3 12 20 / 96%) 0%, rgb(3 12 20 / 90%) 24%, transparent 42%);
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ativos-solutions-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ativos-solutions-cards > .ativos-content-card { grid-column: span 1; }
+  html[data-theme="ativos"] .ativos-solutions-cards > .ativos-content-card { padding: 24px; }
+  .ativos-solutions-cards .ativos-content-card > div:last-child { min-height: 164px; align-items: center; }
+}
+@media (max-width: 639px) {
+  :is(.ativos-dashboards-intro, .ativos-productivity-intro, .ativos-onboarding-intro, .ativos-faq-intro, .ativos-integrations-intro) {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .ativos-integrations .ativos-copy-intro { text-align: left; }
+  .ativos-copy-intro > :is(h2, p) { text-align: left; margin-inline: 0; }
+  .ativos-integrations .custom-box-shadow-button { width: 100%; }
+  .ativos-solutions-cards .ativos-content-card > p { flex: initial; }
+  .ativos-solutions-cards .ativos-content-card > div:last-child { margin-top: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trusted-newsletters-track, .ticker-image-container { animation-play-state: paused !important; }
+  .ativos-marquee-toggle { display: none; }
+  .ativos-marquee { padding-bottom: 0; }
+}
+
+/* Reading refinement: summaries first, full approved details on request. */
+.ativos-dashboard-legacy-details, .ativos-legacy-action { display: none !important; }
+.ativos-dashboard-grid:has(.ativos-dashboard-disclosure[open]) { align-items: start; }
+.ativos-dashboard-card-subtitle { min-height: 0; }
+.ativos-dashboard-disclosure { margin-top: auto; padding-top: 24px; }
+.ativos-dashboard-grid .ativos-dashboard-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 48px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-accent-light);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  list-style: none;
+  cursor: pointer;
+}
+.ativos-dashboard-summary::-webkit-details-marker { display: none; }
+.ativos-dashboard-summary svg { flex: none; transition: transform 180ms var(--ativos-ease); }
+.ativos-dashboard-disclosure[open] > summary svg { transform: rotate(180deg); }
+.ativos-dashboard-disclosure-list { display: grid; gap: 16px; margin: 0; padding: 20px 0 0; }
+.ativos-dashboard-summary:hover { color: var(--color-text-primary); }
+.ativos-dashboard-summary:focus-visible { outline-offset: 4px; }
+.ativos-commercial-action { display: inline-flex; align-items: stretch; justify-content: center; }
+.ativos-commercial-action:disabled { cursor: default; }
+.ativos-commercial-action:disabled > .custom-box-shadow-text { opacity: .65; }
+html[data-theme="ativos"] .ativos-commercial-action:disabled:hover { transform: none; }
+html[data-theme="ativos"] .ativos-commercial-action:disabled:hover > .custom-box-shadow-text {
+  background: var(--color-accent-light) !important;
+  color: var(--color-bg-main) !important;
+  border-color: var(--color-accent-light) !important;
+}
+.ativos-integrations-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+.ativos-integrations-intro { flex: initial; width: 100%; max-width: 780px; text-align: left; align-items: flex-start; }
+.ativos-integrations-intro > p { max-width: var(--ativos-reading-measure); }
+.ativos-integrations .ativos-commercial-action { margin-top: 4px; }
+@media (max-width: 639px) {
+  .ativos-integrations .ativos-commercial-slot { width: 100%; min-width: 0; }
+  .ativos-integrations .ativos-commercial-action,
+  .ativos-integrations .ativos-commercial-action > .custom-box-shadow-text { width: 100%; max-width: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ativos-dashboard-summary svg { transition: none; }
+}

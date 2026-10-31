@@ -1,0 +1,23 @@
+# Publish only the runnable landing and its deployment configuration.
+# Everything else in the workspace stays local, including design, archives,
+# reports, scripts, SEO drafts, skills, virtual environments and credentials.
+/*
+!/.gitignore
+!/.gitattributes
+!/.dockerignore
+!/Dockerfile
+!/DEPLOY.md
+!/run.py
+!/site/
+
+# Secret and local files are never part of the published site.
+**/.env
+**/.env.*
+**/__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# Prepared assets that are no longer consumed by the landing.
+/site/assets/brand/ativos-logo-transparent.png
+/site/assets/section-9/logos/
