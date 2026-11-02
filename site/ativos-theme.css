@@ -203,7 +203,8 @@ html[data-theme="ativos"] .ativos-hero-video {
   background-position: center;
   background-size: cover;
 }
-.ativos-hero-film {
+.ativos-hero-film,
+.mdp-hero-poster {
   display: block;
   width: 100%;
   height: 100%;
@@ -283,7 +284,7 @@ html[data-theme="ativos"] .ativos-hero-video .ativos-hero-title {
     aspect-ratio: 9 / 16;
     min-height: 740px;
   }
-  .ativos-hero-film { object-fit: contain; object-position: center bottom; }
+  .ativos-hero-film, .mdp-hero-poster { object-fit: contain; object-position: center bottom; }
   .ativos-hero-background { background-size: contain; background-repeat: no-repeat; background-position: center bottom; }
   .ativos-hero-background::after {
     background: linear-gradient(180deg, rgb(3 12 20 / 86%) 0%, rgb(3 12 20 / 70%) 30%, transparent 48%);
@@ -343,7 +344,8 @@ html[data-theme="ativos"] .ativos-copy-title {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.ativos-operation-film {
+.ativos-operation-film,
+.mdp-operation-poster {
   display: block;
   width: 100%;
   height: 100%;

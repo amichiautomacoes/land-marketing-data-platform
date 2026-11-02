@@ -23,3 +23,10 @@ A hospedagem deve iniciar o servidor ou o contêiner e encaminhar sua porta HTTP
 As credenciais do GitHub ficam somente no `.env` local e não são necessárias
 para executar a landing. Os botões comerciais dependem da configuração de
 `commercialContactUrl` em `site/ativos-theme.js`.
+
+A página entrega HTML MDP pré-renderizado; Node e React não são necessários
+na hospedagem. O domínio público permanece sem definição. Até sua aprovação,
+o servidor omite canonical, `og:url` e URLs públicas do JSON-LD. Para fixá-las
+depois, configure `PUBLIC_SITE_URL` com a origem HTTPS aprovada ou utilize
+`--site-url`. A configuração rejeita credenciais, caminhos, query e fragmento.
+O endereço do preview e os cabeçalhos de proxy não são usados como canonical.

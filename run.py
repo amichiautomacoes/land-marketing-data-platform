@@ -9,10 +9,51 @@ import os
 import re
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from urllib.parse import parse_qs, unquote, urlsplit, urlunsplit
+from urllib.parse import parse_qs, unquote, urljoin, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parent
 SITE = ROOT / 'site'
+
+
+def normalize_public_site_url(value: str) -> str:
+    parsed = urlsplit(value)
+    if (parsed.scheme not in ('http', 'https') or not parsed.hostname
+            or parsed.username or parsed.password or parsed.path not in ('', '/')
+            or parsed.query or parsed.fragment or any(char.isspace() for char in value)):
+        raise ValueError('PUBLIC_SITE_URL must be the absolute HTTP(S) origin of the landing.')
+    # Accessing port also rejects malformed ports instead of publishing bad metadata.
+    _ = parsed.port
+    return urlunsplit((parsed.scheme, parsed.netloc, '/', '', ''))
+
+
+def render_mdp_metadata(source: str, public_url: str | None) -> str:
+    """Resolve the page's own URLs in the HTTP response, including without JavaScript."""
+    if not public_url:
+        # No public domain has been approved. An absent canonical is intentional;
+        # an empty href or the preview's address would silently assert a URL.
+        return source
+    escaped = html.escape(public_url, quote=True)
+    source = source.replace('<!-- MDP_PUBLIC_URL -->',
+                            f'<link rel="canonical" href="{escaped}"><meta property="og:url" content="{escaped}">')
+    source = re.sub(r'content="(/assets/[^"<>]+)" data-mdp-image-url',
+                    lambda match: f'content="{html.escape(urljoin(public_url, match[1]), quote=True)}" data-mdp-image-url', source)
+
+    def structured_data(match: re.Match) -> str:
+        def resolve(value):
+            if isinstance(value, list):
+                return [resolve(item) for item in value]
+            if isinstance(value, dict):
+                result = {key: urljoin(public_url, item) if key in ('@id', 'url') and isinstance(item, str) and item.startswith(('/', '#'))
+                          else resolve(item) for key, item in value.items()}
+                if result.get('@type') in ('WebSite', 'SoftwareApplication', 'WebPage'):
+                    result['url'] = public_url
+                return result
+            return value
+        payload = json.dumps(resolve(json.loads(match[2])), ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
+        return match[1] + payload + match[3]
+
+    return re.sub(r'(<script type="application/ld\+json" id="mdp-structured-data">)(.*?)(</script>)',
+                  structured_data, source, flags=re.S)
 
 
 def image_identity(url: str) -> str:
@@ -25,6 +66,7 @@ class LandingHandler(BaseHTTPRequestHandler):
     protocol_version = 'HTTP/1.1'
     assets: dict = {}
     aliases: dict = {}
+    public_site_url: str | None = None
 
     def do_HEAD(self) -> None:
         self.do_GET()
@@ -43,7 +85,9 @@ class LandingHandler(BaseHTTPRequestHandler):
             self.send_content(b'{}', 'application/json')
             return
         if path in ('/', '/index.html'):
-            self.send_file(SITE / 'index.html', 'text/html; charset=utf-8')
+            source = (SITE / 'index.html').read_text(encoding='utf-8')
+            content = render_mdp_metadata(source, self.public_site_url).encode('utf-8')
+            self.send_content(content, 'text/html; charset=utf-8')
             return
         if path in ('/local-runtime.js', '/local-runtime.css', '/ativos-theme.css', '/ativos-theme.js'):
             self.send_file(SITE / path.lstrip('/'))
@@ -133,7 +177,14 @@ def main() -> None:
     parser = argparse.ArgumentParser(description='Marketing Data Platform landing server')
     parser.add_argument('--host', default=os.environ.get('HOST', '127.0.0.1'))
     parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', '8000')))
+    parser.add_argument('--site-url', default=os.environ.get('PUBLIC_SITE_URL'),
+                        help='Absolute public origin for canonical and structured-data URLs.')
     args = parser.parse_args()
+    if args.site_url:
+        try:
+            LandingHandler.public_site_url = normalize_public_site_url(args.site_url)
+        except ValueError as error:
+            parser.error(str(error))
     manifest_path = SITE / 'asset-map.json'
     if not manifest_path.is_file():
         parser.error('Missing site/asset-map.json. Restore the complete site/ directory.')

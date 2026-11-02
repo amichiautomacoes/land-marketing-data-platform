@@ -1,4 +1,4 @@
-# Publish only the runnable landing and its deployment configuration.
+# Publish the runnable landing, deployment configuration and copy recommendations.
 # Everything else in the workspace stays local, including design, archives,
 # reports, scripts, SEO drafts, skills, virtual environments and credentials.
 /*
@@ -7,6 +7,7 @@
 !/.dockerignore
 !/Dockerfile
 !/DEPLOY.md
+!/OTIMIZACOES_COPY_SEO_GEO.md
 !/run.py
 !/site/
 

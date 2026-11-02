@@ -1,4 +1,4 @@
-/* Ativos presentation and approved copy, applied after the captured components hydrate. */
+/* Approved MDP copy and interactions; supports both archived capture and prerendered HTML. */
 (() => {
   const heroCopy = {
     title: 'Todos os dados dos seus clientes. ',
@@ -382,6 +382,18 @@
     for (const [name, value] of Object.entries(attributes)) {
       if (image.getAttribute(name) !== value) image.setAttribute(name, value);
     }
+  };
+  const removeLegacyIntegrationClaims = () => {
+    const artwork = document.querySelector('.ativos-integrations .ativos-integrations-art');
+    const claims = artwork?.nextElementSibling;
+    if (!claims?.matches('.grid.grid-cols-1.gap-8') || claims.children.length !== 3) return;
+    if (![claims, ...claims.querySelectorAll('p')].every(isHydrated)) {
+      setTimeout(schedule, 50);
+      return;
+    }
+    // Remove the captured newsletter claims, including their icons and auxiliary
+    // content, from both the presentation and accessibility tree after hydration.
+    claims.remove();
   };
   const applyHeroCopy = () => {
     const heading = document.querySelector('h1');
@@ -774,6 +786,77 @@
     illustration.after(copy);
     illustration.hidden = true;
   };
+  const bindProductivityCarousel = carousel => {
+    const track = carousel.querySelector('.ativos-benefits-track');
+    const buttons = [...track.querySelectorAll('.ativos-benefit-card')];
+    const [previous, next] = carousel.querySelectorAll('.ativos-benefits-arrow');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+    let active = 0;
+    let revealTimer;
+    let spotlightFrame = 0;
+    let spotlightPointer;
+    const updateSpotlight = () => {
+      spotlightFrame = 0;
+      if (!spotlightPointer || !finePointer.matches || reducedMotion.matches) return;
+      const { card, x, y } = spotlightPointer;
+      const bounds = card.getBoundingClientRect();
+      card.style.setProperty('--mdp-pointer-x', `${x - bounds.left}px`);
+      card.style.setProperty('--mdp-pointer-y', `${y - bounds.top}px`);
+    };
+    const reveal = () => {
+      const card = buttons[active];
+      // Scroll this strip only; changing a card must never move the page vertically.
+      track.scrollTo({
+        left: card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2,
+        behavior: reducedMotion.matches ? 'instant' : 'smooth',
+      });
+    };
+    const select = (index, shouldReveal = false) => {
+      active = Math.max(0, Math.min(buttons.length - 1, index));
+      buttons.forEach((button, i) => {
+        const expanded = i === active;
+        button.setAttribute('aria-expanded', String(expanded));
+        button.querySelector('.ativos-benefit-description').setAttribute('aria-hidden', String(!expanded));
+        if (expanded) button.setAttribute('aria-describedby', `ativos-benefit-${i}-description`);
+        else button.removeAttribute('aria-describedby');
+      });
+      previous.disabled = active === 0;
+      next.disabled = active === buttons.length - 1;
+      clearTimeout(revealTimer);
+      if (shouldReveal) {
+        // Wait for the width transition before measuring the final card position.
+        revealTimer = setTimeout(reveal, reducedMotion.matches ? 0 : 300);
+      }
+    };
+    buttons.forEach((button, index) => {
+      button.addEventListener('pointerenter', event => {
+        const keyboardCard = track.querySelector('.ativos-benefit-card:focus-visible');
+        if (keyboardCard && keyboardCard !== button) return;
+        if (event.pointerType === 'mouse' && finePointer.matches) select(index);
+      });
+      // CSS draws the light; JavaScript only supplies the pointer coordinates, once per frame.
+      button.addEventListener('pointermove', event => {
+        if (event.pointerType !== 'mouse' || !finePointer.matches || reducedMotion.matches) return;
+        spotlightPointer = { card: button, x: event.clientX, y: event.clientY };
+        if (!spotlightFrame) spotlightFrame = requestAnimationFrame(updateSpotlight);
+      });
+      button.addEventListener('pointerleave', () => {
+        if (spotlightPointer?.card === button) spotlightPointer = null;
+      });
+      button.addEventListener('click', () => select(index, true));
+      button.addEventListener('focus', () => select(index, true));
+      button.addEventListener('keydown', event => {
+        const target = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: buttons.length - 1 }[event.key];
+        if (target === undefined) return;
+        event.preventDefault();
+        buttons[Math.max(0, Math.min(buttons.length - 1, target))].focus({ preventScroll: true });
+      });
+    });
+    previous.addEventListener('click', () => select(active - 1, true));
+    next.addEventListener('click', () => select(active + 1, true));
+    select(0);
+  };
   const applyProductivityCarousel = () => {
     const section = document.querySelector('.ativos-productivity');
     const cta = document.querySelector('.ativos-final-cta');
@@ -864,77 +947,54 @@
       track.appendChild(button);
       return button;
     });
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
-    let active = 0;
-    let revealTimer;
-    let spotlightFrame = 0;
-    let spotlightPointer;
-    const updateSpotlight = () => {
-      spotlightFrame = 0;
-      if (!spotlightPointer || !finePointer.matches || reducedMotion.matches) return;
-      const { card, x, y } = spotlightPointer;
-      const bounds = card.getBoundingClientRect();
-      card.style.setProperty('--mdp-pointer-x', `${x - bounds.left}px`);
-      card.style.setProperty('--mdp-pointer-y', `${y - bounds.top}px`);
-    };
-    const reveal = () => {
-      const card = buttons[active];
-      // Scroll this strip only; changing a card must never move the page vertically.
-      track.scrollTo({
-        left: card.offsetLeft - (track.clientWidth - card.offsetWidth) / 2,
-        behavior: reducedMotion.matches ? 'instant' : 'smooth',
-      });
-    };
-    const select = (index, shouldReveal = false) => {
-      active = Math.max(0, Math.min(buttons.length - 1, index));
-      buttons.forEach((button, i) => {
-        const expanded = i === active;
-        button.setAttribute('aria-expanded', String(expanded));
-        button.querySelector('.ativos-benefit-description').setAttribute('aria-hidden', String(!expanded));
-        if (expanded) button.setAttribute('aria-describedby', `ativos-benefit-${i}-description`);
-        else button.removeAttribute('aria-describedby');
-      });
-      previous.disabled = active === 0;
-      next.disabled = active === buttons.length - 1;
-      clearTimeout(revealTimer);
-      if (shouldReveal) {
-        // Wait for the width transition before measuring the final card position.
-        revealTimer = setTimeout(reveal, reducedMotion.matches ? 0 : 300);
-      }
-    };
-    buttons.forEach((button, index) => {
-      button.addEventListener('pointerenter', event => {
-        const keyboardCard = track.querySelector('.ativos-benefit-card:focus-visible');
-        if (keyboardCard && keyboardCard !== button) return;
-        if (event.pointerType === 'mouse' && finePointer.matches) select(index);
-      });
-      // CSS draws the light; JavaScript only supplies the pointer coordinates, once per frame.
-      button.addEventListener('pointermove', event => {
-        if (event.pointerType !== 'mouse' || !finePointer.matches || reducedMotion.matches) return;
-        spotlightPointer = { card: button, x: event.clientX, y: event.clientY };
-        if (!spotlightFrame) spotlightFrame = requestAnimationFrame(updateSpotlight);
-      });
-      button.addEventListener('pointerleave', () => {
-        if (spotlightPointer?.card === button) spotlightPointer = null;
-      });
-      button.addEventListener('click', () => select(index, true));
-      button.addEventListener('focus', () => select(index, true));
-      button.addEventListener('keydown', event => {
-        const target = { ArrowLeft: index - 1, ArrowRight: index + 1, Home: 0, End: buttons.length - 1 }[event.key];
-        if (target === undefined) return;
-        event.preventDefault();
-        buttons[Math.max(0, Math.min(buttons.length - 1, target))].focus({ preventScroll: true });
-      });
-    });
-    previous.addEventListener('click', () => select(active - 1, true));
-    next.addEventListener('click', () => select(active + 1, true));
-    select(0);
     const conclusion = document.createElement('p');
     conclusion.className = 'ativos-productivity-conclusion';
     conclusion.textContent = productivityCopy.conclusion;
     carousel.append(controls, track, conclusion);
     cards.after(carousel);
+    bindProductivityCarousel(carousel);
+  };
+  const bindOnboardingTimeline = journey => {
+    const timeline = journey.querySelector('.ativos-journey-timeline');
+    const list = timeline.querySelector('.ativos-journey-steps');
+    const track = timeline.querySelector('.ativos-journey-track');
+    const dots = [...list.querySelectorAll('.ativos-journey-dot')];
+    const steps = [...list.children];
+    const desktop = matchMedia('(min-width: 1024px)');
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    let queued = false;
+    const clamp = value => Math.max(0, Math.min(1, value));
+    const update = () => {
+      queued = false;
+      if (!timeline.isConnected) return;
+      const bounds = timeline.getBoundingClientRect();
+      const points = dots.map(dot => { const r = dot.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; });
+      const first = points[0], last = points.at(-1);
+      const distance = desktop.matches ? last.x - first.x : last.y - first.y;
+      track.style.left = `${first.x - bounds.left - (desktop.matches ? 0 : 1)}px`;
+      track.style.top = `${first.y - bounds.top - (desktop.matches ? 1 : 0)}px`;
+      track.style.width = `${desktop.matches ? distance : 2}px`;
+      track.style.height = `${desktop.matches ? 2 : distance}px`;
+      const guide = innerHeight * .57;
+      const progress = reducedMotion.matches ? 1 : desktop.matches
+        ? clamp((innerHeight * .82 - first.y) / (innerHeight * .52))
+        : clamp((guide - first.y) / (distance || 1));
+      timeline.style.setProperty('--journey-progress', String(progress));
+      steps.forEach((step, index) => {
+        const reached = reducedMotion.matches || (desktop.matches
+          ? progress >= index / (steps.length - 1) && first.y <= innerHeight * .82
+          : points[index].y <= guide);
+        step.classList.toggle('is-reached', reached);
+      });
+    };
+    const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
+    addEventListener('scroll', queue, { passive: true });
+    addEventListener('resize', queue, { passive: true });
+    desktop.addEventListener('change', queue);
+    reducedMotion.addEventListener('change', queue);
+    new ResizeObserver(queue).observe(timeline);
+    document.fonts.ready.then(queue);
+    queue();
   };
   const applyOnboardingTimeline = () => {
     const section = document.querySelector('.ativos-onboarding');
@@ -1004,43 +1064,7 @@
     journey.append(timeline, conclusion);
     intro.after(journey);
 
-    const dots = [...list.querySelectorAll('.ativos-journey-dot')];
-    const steps = [...list.children];
-    const desktop = matchMedia('(min-width: 1024px)');
-    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-    let queued = false;
-    const clamp = value => Math.max(0, Math.min(1, value));
-    const update = () => {
-      queued = false;
-      if (!timeline.isConnected) return;
-      const bounds = timeline.getBoundingClientRect();
-      const points = dots.map(dot => { const r = dot.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; });
-      const first = points[0], last = points.at(-1);
-      const distance = desktop.matches ? last.x - first.x : last.y - first.y;
-      track.style.left = `${first.x - bounds.left - (desktop.matches ? 0 : 1)}px`;
-      track.style.top = `${first.y - bounds.top - (desktop.matches ? 1 : 0)}px`;
-      track.style.width = `${desktop.matches ? distance : 2}px`;
-      track.style.height = `${desktop.matches ? 2 : distance}px`;
-      const guide = innerHeight * .57;
-      const progress = reducedMotion.matches ? 1 : desktop.matches
-        ? clamp((innerHeight * .82 - first.y) / (innerHeight * .52))
-        : clamp((guide - first.y) / (distance || 1));
-      timeline.style.setProperty('--journey-progress', String(progress));
-      steps.forEach((step, index) => {
-        const reached = reducedMotion.matches || (desktop.matches
-          ? progress >= index / (steps.length - 1) && first.y <= innerHeight * .82
-          : points[index].y <= guide);
-        step.classList.toggle('is-reached', reached);
-      });
-    };
-    const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update); } };
-    addEventListener('scroll', queue, { passive: true });
-    addEventListener('resize', queue, { passive: true });
-    desktop.addEventListener('change', queue);
-    reducedMotion.addEventListener('change', queue);
-    new ResizeObserver(queue).observe(timeline);
-    document.fonts.ready.then(queue);
-    queue();
+    bindOnboardingTimeline(journey);
   };
   const standardizeDashboardCards = () => {
     const section = document.querySelector('.ativos-dashboards');
@@ -1354,6 +1378,7 @@
     applySectionCopy('faq', 'GOT QUESTIONS', faqCopy);
     applySectionCopy('integrations', 'CONNECT YOUR NEWSLETTER', integrationsCopy);
     applyIntegrationArtwork();
+    removeLegacyIntegrationClaims();
     applyFaqItems();
     document.querySelectorAll('a[href^="/features?tag="]').forEach(card => card.classList.add('ativos-content-card'));
     for (const heading of document.querySelectorAll('h2')) {
@@ -1420,6 +1445,84 @@
       childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['data-theme'],
     });
   };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
-  else start();
+  const enhancePrerenderedPage = () => {
+    // The approved presentation is already in the response. Only bind behavior;
+    // never replace the initial MDP content with the archived newsletter page.
+    for (const [selector, settings] of [
+      ['.ativos-hero', { query: '(min-width: 1024px)', prefix: '/assets/hero/hero-' }],
+      ['.ativos-operation-video', { query: '(min-width: 640px)', prefix: '/assets/section-2/section-2-', labelSuffix: ' da operação' }],
+    ]) {
+      const target = document.querySelector(selector);
+      const video = target?.querySelector('video');
+      const toggle = target?.querySelector('.ativos-hero-motion-toggle');
+      if (!video || !toggle) continue;
+      target.querySelector('.mdp-loop-poster')?.setAttribute('hidden', '');
+      video.style.visibility = '';
+      toggle.hidden = false;
+      attachLoopPlayback(video, toggle, video.parentElement, { target, ...settings });
+    }
+    const board = document.querySelector('.ativos-platform-testimonials');
+    const tabs = [...board.querySelectorAll('[role="tab"]')];
+    const panels = [...board.querySelectorAll('[role="tabpanel"]')];
+    const selectedTabClass = tabs[0].className;
+    const inactiveTabClass = tabs[1].className;
+    const selectTab = index => {
+      tabs.forEach((tab, position) => {
+        const selected = index === position;
+        tab.setAttribute('aria-selected', String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+        tab.className = selected ? selectedTabClass : inactiveTabClass;
+        tab.dataset.headlessuiState = selected ? 'selected' : '';
+        tab.toggleAttribute('data-selected', selected);
+        panels[position].hidden = !selected;
+        panels[position].tabIndex = selected ? 0 : -1;
+        panels[position].dataset.headlessuiState = selected ? 'selected' : '';
+        panels[position].toggleAttribute('data-selected', selected);
+      });
+    };
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => selectTab(index));
+      tab.addEventListener('keydown', event => {
+        const destination = { ArrowLeft: (index + tabs.length - 1) % tabs.length, ArrowRight: (index + 1) % tabs.length, Home: 0, End: tabs.length - 1 }[event.key];
+        if (destination === undefined) return;
+        event.preventDefault();
+        selectTab(destination);
+        tabs[destination].focus();
+      });
+    });
+    selectTab(0);
+    bindProductivityCarousel(document.querySelector('.ativos-benefits-carousel'));
+    bindOnboardingTimeline(document.querySelector('.ativos-journey'));
+    document.querySelectorAll('.ativos-dashboard-grid > .ativos-plan').forEach((card, index) => {
+      const details = card.querySelector('details');
+      const summary = details.querySelector('summary');
+      const label = summary.querySelector('span');
+      const update = () => {
+        const action = details.open ? 'Ocultar detalhes' : 'Ver detalhes';
+        label.textContent = action;
+        summary.setAttribute('aria-label', `${action}: ${dashboardCardsCopy[index].title}`);
+      };
+      details.addEventListener('toggle', update);
+      update();
+    });
+    for (const existing of document.querySelectorAll('.ativos-marquee-toggle')) existing.remove();
+    refineAccessibility();
+    document.querySelector('.ativos-skip-link')?.addEventListener('click', () => document.querySelector('main').focus({ preventScroll: true }));
+    // Keep the existing commercial configuration usable after prerendering.
+    document.querySelectorAll('.ativos-commercial-action').forEach(current => {
+      const action = document.createElement(commercialContactUrl ? 'a' : 'button');
+      action.className = current.className;
+      action.append(...current.childNodes);
+      if (commercialContactUrl) action.href = commercialContactUrl;
+      else {
+        action.type = 'button';
+        action.disabled = true;
+        action.title = 'Contato comercial indisponível no momento';
+      }
+      current.replaceWith(action);
+    });
+  };
+  const initialize = document.documentElement.dataset.mdpPrerender === 'true' ? enhancePrerenderedPage : start;
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialize, { once: true });
+  else initialize();
 })();
